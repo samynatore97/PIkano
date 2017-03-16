@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "caviar";
+	src: url('caviar.woff') format('woff');
+}
+
+* {
+	font-family: 'caviar', Arial, serif;	
+}
+
+h1 {
+	text-align: center;	
+}
+
+#test-center {
+	text-align:center;
+	text-align:justify;
+}
+
+body {
+	background-color:rgb(52, 73, 94);
+	color:rgb(236, 240, 241);
+}
+
+a {
+	text-decoration: none;
+	color: rgb(22, 160, 133);
+	font-style: italic;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color:rgb(142, 68, 173);
+}
+
+presGui {
+	text-align: center;
+}
