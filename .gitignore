@@ -30,3 +30,10 @@
 
 # Debug files
 *.dSYM/
+
+# nos fichiers
+*.o
+*.d
+*.swp
+*.swo
+
