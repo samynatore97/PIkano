@@ -22,8 +22,8 @@ struct s_matrix* color_graph(SDL_Surface * partition)
   struct s_matrix * histo = histo_hori(real_partition);
   struct list *num_lines ;
   num_lines = ligne_port(histo);
-  struct s_matrix *color;
-  color = color_line(real_partition,num_lines); 
+  struct s_matrix *color ;
+  color = color_line(real_partition, num_lines);
 	for (size_t i = 0 ; i<color->lines ;i++)
 	{
 		for (size_t j = 0 ; j<color->cols;j++)
@@ -37,6 +37,45 @@ struct s_matrix* color_graph(SDL_Surface * partition)
 			}
 		}
 	}
-	return color ;
-}
+	struct s_matrix * res ;
+	res = delete_line(color, num_lines);
 
+	return res ;
+}
+struct s_matrix * delete_line(struct s_matrix * mat, struct list * list)
+{
+	struct list * ptr = list->next; 
+	while (ptr != NULL)
+	{
+		for (size_t j = 0 ; j < mat->cols; j++)
+		{
+			if (mat->data[((*(size_t *)(ptr->data)) + 1) *mat->cols+j] == 3  || mat->data[((*(size_t *)(ptr->data)) -1) * mat->cols + j ] == 3)
+					  mat->data[(*(size_t * )ptr->data)*mat->cols +j ] = 3 ;
+			else
+			{
+			  mat->data[(*(size_t *)ptr->data) * mat->cols + j ] = 1 ;
+			}
+		}
+		ptr = ptr->next ;
+	}
+	return mat ;
+}
+/*
+struct s_matrix * __delete_line(struct s_matrix * mat, struct list * list)
+{
+	while (list != NULL)
+	{
+		for (size_t j = 0 ; j < mat->cols; j++)
+		{
+			if (mat->data[(list->data + 1) *mat->cols+j] == 0  || mat->data[(list->data -1) * mat->cols + j ] == 0)
+					  mat->data[list->data*mat->cols +j ] = 0 ;
+			else
+			{
+			  mat->data[list->data * mat->cols + j ] = 1 ;
+			}
+		}
+		list = list->next ;
+	}
+	return mat ;
+}
+*/

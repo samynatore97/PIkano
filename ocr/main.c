@@ -31,12 +31,14 @@ int main(int argc, char *argv[])
 	SDL_Surface * partitionGS = generateGrayScaleImage(partition1);
 	SDL_Surface *partition = generateBlackAndWhiteFromGS(partitionGS);
 	display_image(partition);
+
 	struct s_matrix * histo = build_histo_hori(partition);
 	SDL_Surface *histo_hori = build_img_histo_hori(histo);
 	display_image(histo_hori);
 	struct s_matrix *color =  build_color_line(partition);
 	SDL_Surface * partition_color = build_img_color_line(color);
-	display_image(partition_color); 
+	display_image(partition_color);
+	
 	struct s_matrix *prey = color_graph(partition);
 	SDL_Surface *graph = genImgFromMat(prey);
 	display_image(graph);

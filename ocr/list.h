@@ -5,8 +5,8 @@
 # include <stddef.h>
 # include "coord.h"
 struct list {
-struct list *next;
-int  data;
+  struct list *next;
+  void *  data;
 };
 struct list_coord{
 struct list_coord *next;
@@ -17,7 +17,7 @@ int list_is_empty(struct list * list);
 size_t list_len(struct list * list);
 void list_push_front (struct list *list , struct list *elm);
 struct list* list_pop_front(struct list *list);
-struct list * list_find(struct list *list, int value);
+struct list * list_find(struct list *list, void * value);
 int list_is_sorted(struct list *list);
 void list_insert(struct list * list, struct list *elm);
 

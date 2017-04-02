@@ -37,7 +37,7 @@ struct list* list_pop_front(struct list  *list){
   return res;
 }
 
-struct list* list_find(struct list *list,int value){
+struct list* list_find(struct list *list,void * value){
   while(list){
   if (list->data == value){
      return list;

@@ -36,27 +36,37 @@ struct list * ligne_port(struct s_matrix* mat)
 		 if (cpt>=( mat->cols/2))
 		 {
 			 struct list * elm = malloc(sizeof(struct list));
-			 elm->next =NULL;
-			 elm->data = i;
+//			 elm->next =NULL;
+			 size_t * tmp = malloc(sizeof(size_t));
+			 *tmp = i;
+			 elm->data = tmp;
 			 list_push_front(res,elm);
 			 
 		 }
 	}
+	struct list* ptr = res->next;
+	while (ptr != NULL)
+	{
+		printf("%zu \n ",*((size_t *)ptr->data));
+		ptr = ptr->next ;
+	}
+	printf("fin lign_port");
   	return res;
 }
 
 struct s_matrix* color_line(struct s_matrix * partition, struct list* list)
 {
 //	struct s_matrix * partition;
-//	partition = matrix_copy(mat);	  
-	while(list!= NULL)
+//	partition = matrix_copy(mat);
+   struct list* ptr  = list->next;
+	while(ptr != NULL)
 	{
 		for(size_t j = 0 ; j <partition->cols;j++)
 			{
-				if(partition->data[list->data*partition->cols+j] ==0)
-				   partition->data[list->data*partition->cols+j] = 2;
+				if(partition->data[*((size_t *)(ptr->data))*partition->cols+j] ==0)
+				   partition->data[*((size_t *)(ptr->data))*partition->cols+j] = 2;
 			}
-		list= list->next;
+		ptr= ptr->next;
 	}
   return partition;
 }
