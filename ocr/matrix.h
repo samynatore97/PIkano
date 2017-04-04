@@ -33,5 +33,8 @@ SDL_Surface * generateEmptySurface(size_t width, size_t height);
 SDL_Surface * genImgFromMat(struct s_matrix * mat);
 // Memory Free
 void matrix_free();
-
+//Min
+size_t Min(size_t a , size_t b );
+//Max
+size_t Max(size_t a , size_t b );
 # endif

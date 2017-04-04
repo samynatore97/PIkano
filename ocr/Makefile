@@ -12,6 +12,7 @@ SRC =		matrix.c \
 		list.c \
 		graph_iden.c  \
 		surface_operations.c \
+		coord.c		\
 		main.c
 OBJ = ${SRC:.c=.o}
 DEP = ${SRC:.c=.d}

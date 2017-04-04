@@ -150,3 +150,11 @@ void matrix_free(struct s_matrix *mat)
 				else
 								errx(1,"Could not free matrix (NULL)");
 }
+size_t Min(size_t a , size_t b)
+{
+  return a > b ? b : a ;
+}
+size_t Max(size_t a, size_t b)
+{
+  return a > b ? a : b ;
+}
