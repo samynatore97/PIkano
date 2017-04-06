@@ -26,17 +26,19 @@ struct list * fill_list_coord(struct s_matrix * mat)
 			if (mat->data[i*mat->cols + j] == 3)
 			{
 				struct list *elm = malloc(sizeof(struct list));
-				struct coord * tmp = malloc(sizeof(struct coord );
+				struct coord * tmp = malloc(sizeof(struct coord ));
 				tmp = propa_coord(mat,i,j);
 				elm->data = tmp;
 				list_push_front(res,elm);
 			}
 		}
 	}
+	return res ;
 }
 
 struct coord * propa_coord(struct s_matrix * mat,size_t i ,size_t j )
 {
-	if ( )
+  struct coord * res ;
+  return res;
 }
 
