@@ -1,10 +1,5 @@
-# include <err.h>
-# include "ligne_iden.h"
-# include "SDL_init.h"
-# include "list.h"
-# include "matrix.h"
-# include "graph_iden.h"
-# include "surface_operations.h"
+# include "main.h"
+
 int main(int argc, char *argv[])
 {
 	if(argc <1)
@@ -42,5 +37,10 @@ int main(int argc, char *argv[])
 	struct s_matrix *prey = color_graph(partition);
 	SDL_Surface *graph = genImgFromMat(prey);
 	display_image(graph);
+
+	struct list *l2 = fill_list_coord(prey);
+	struct s_matrix * rect = draw_all_rect(prey,l2);
+	SDL_Surface *rec = genImgFromMat(rect);
+	display_image(rec);
 	return 0; 
 }

@@ -3,15 +3,11 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stddef.h>
-# include "coord.h"
 struct list {
   struct list *next;
   void *  data;
 };
-struct list_coord{
-struct list_coord *next;
-struct coord *coord;
-};
+
 void list_init(struct list * list);
 int list_is_empty(struct list * list);
 size_t list_len(struct list * list);

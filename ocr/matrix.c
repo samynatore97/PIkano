@@ -73,6 +73,10 @@ SDL_Surface * genImgFromMat(struct s_matrix *mat)
 					break;
 				case 3 :
 					pix = SDL_MapRGB(result->format,255,0,0);
+					break;
+				case 4 :
+					pix = SDL_MapRGB(result->format,0,255,0);
+					break;
 			}
 			putpixel(result, y,x ,pix);
 		}

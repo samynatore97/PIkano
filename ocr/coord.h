@@ -9,7 +9,9 @@ struct coord{
 		  size_t maxright;
 		  size_t numnote;
 };
-struct s_matrix* drawrect(struct s_matrix *mat,struct coord * coord);
-struct coord * propa_coord(struct s_matrix * mat,size_t i ,size_t j);
+void print_coord(struct coord * coord);
+void draw_rect(struct s_matrix *mat, struct coord * coord);
+struct s_matrix* draw_all_rect(struct s_matrix * mat, struct list * list);
+struct coord * propa_coord(struct s_matrix * mat, size_t i , size_t j, struct coord * coord);
 struct list * fill_list_coord(struct s_matrix * mat);
 # endif

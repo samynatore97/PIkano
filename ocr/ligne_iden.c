@@ -44,13 +44,6 @@ struct list * ligne_port(struct s_matrix* mat)
 			 
 		 }
 	}
-	struct list* ptr = res->next;
-	while (ptr != NULL)
-	{
-		printf("%zu \n ",*((size_t *)ptr->data));
-		ptr = ptr->next ;
-	}
-	printf("fin lign_port");
   	return res;
 }
 
@@ -66,7 +59,7 @@ struct s_matrix* color_line(struct s_matrix * partition, struct list* list)
 				if(partition->data[*((size_t *)(ptr->data))*partition->cols+j] ==0)
 				   partition->data[*((size_t *)(ptr->data))*partition->cols+j] = 2;
 			}
-		ptr= ptr->next;
+		ptr = ptr->next;
 	}
   return partition;
 }
