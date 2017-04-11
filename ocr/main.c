@@ -39,8 +39,12 @@ int main(int argc, char *argv[])
 	display_image(graph);
 
 	struct list *l2 = fill_list_coord(prey);
-	struct s_matrix * rect = draw_all_rect(prey,l2);
-	SDL_Surface *rec = genImgFromMat(rect);
-	display_image(rec);
+//	struct s_matrix * rect = draw_all_rect(prey,l2);
+//	SDL_Surface *rec = genImgFromMat(rect);
+//	display_image(rec);
+
+	struct s_matrix *bar = delete_vert_graph(prey, l2);
+	SDL_Surface * barr = genImgFromMat(bar);
+	display_image(barr);
 	return 0; 
 }

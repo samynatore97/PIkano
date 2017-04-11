@@ -79,3 +79,43 @@ struct s_matrix * __delete_line(struct s_matrix * mat, struct list * list)
 	return mat ;
 }
 */
+//supprime les barres verticales des notes 
+struct s_matrix * delete_vert_graph(struct s_matrix * mat, struct list * list)
+	{
+		size_t cpt ;
+		struct list * ptr = list->next;
+		while(ptr!=NULL)
+		{
+			struct coord * coord = (struct coord * ) (ptr->data);
+			for (size_t j = coord->maxleft; j < coord->maxright ; j++)
+			{
+				cpt = 0 ;
+				for (size_t i = coord->maxup ; i < coord->maxdown ; i++)
+				{
+					if (mat->data[i* mat->cols + j] == 4)
+					{
+						cpt ++;
+					}
+					if (mat->data[i*mat->cols + j]!=4)
+					{
+						if (cpt > 0)
+						{
+							break;
+						}
+					}
+				}
+				if(cpt > ((coord->maxdown - coord->maxup)/2))
+				{
+					for (size_t k = coord->maxup ; k < coord->maxdown ; k++)
+					{
+							  if (mat->data[k* mat->cols + j ] == 4)
+							  {
+									 mat->data[k*mat->cols + j ] = 3 ;
+							  }
+					}
+				}
+			}
+			ptr = ptr->next;
+		}
+		return mat;
+	}

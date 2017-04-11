@@ -7,15 +7,15 @@ void print_coord(struct coord * coord)
 }
 void  draw_rect(struct s_matrix *mat,struct coord * coord )
 {
-	for (size_t i = coord->maxup ; i <coord->maxdown ;i++)
+	for (size_t i = coord->maxup-5 ; i <coord->maxdown+5 ;i++)
   {
-		mat->data[i*mat->cols+coord->maxleft] = 4 ;
-		mat->data[i*mat->cols + coord->maxright+17] = 4 ;
+		mat->data[i*mat->cols + coord->maxleft-5] = 5 ;
+		mat->data[i*mat->cols + coord->maxright+17] = 5 ;
   }
-	for (size_t j = coord->maxleft;j<coord->maxright + 17 ;j++)
+	for (size_t j = coord->maxleft-5;j<coord->maxright + 17 ;j++)
 	{
-		mat->data[coord->maxup*mat->cols + j] = 4;
-		mat->data[coord->maxdown *mat->cols +j] = 4 ;
+		mat->data[coord->maxup-5*mat->cols + j] = 5;
+		mat->data[coord->maxdown+5 *mat->cols + j] = 5 ;
 	}
 	return ;
 }
