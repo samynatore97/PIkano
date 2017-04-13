@@ -44,7 +44,14 @@ int main(int argc, char *argv[])
 //	display_image(rec);
 
 	struct s_matrix *bar = delete_vert_graph(prey, l2);
-	SDL_Surface * barr = genImgFromMat(bar);
+	SDL_Surface * barr = genImgFromMat(prey);
 	display_image(barr);
+
+	printf("avant : %zu \n",list_len(l2));
+	struct list * l3 = create_list_barre_mesure(bar,l2);
+	printf("len de la liste apres détection des barres de mesures : %zu \n ",list_len(l2));
+	struct s_matrix * rect = draw_all_rect(bar,l2);
+	SDL_Surface * rec = genImgFromMat(rect);
+	display_image(rec);
 	return 0; 
 }

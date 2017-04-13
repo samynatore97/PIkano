@@ -7,15 +7,15 @@ void print_coord(struct coord * coord)
 }
 void  draw_rect(struct s_matrix *mat,struct coord * coord )
 {
-	for (size_t i = coord->maxup-5 ; i <coord->maxdown+5 ;i++)
+	for (size_t i = coord->maxup ; i <coord->maxdown ;i++)
   {
-		mat->data[i*mat->cols + coord->maxleft-5] = 5 ;
+		mat->data[i*mat->cols + coord->maxleft] = 5 ;
 		mat->data[i*mat->cols + coord->maxright+17] = 5 ;
   }
-	for (size_t j = coord->maxleft-5;j<coord->maxright + 17 ;j++)
+	for (size_t j = coord->maxleft;j<coord->maxright + 17 ;j++)
 	{
-		mat->data[coord->maxup-5*mat->cols + j] = 5;
-		mat->data[coord->maxdown+5 *mat->cols + j] = 5 ;
+		mat->data[coord->maxup*mat->cols + j] = 5;
+		mat->data[coord->maxdown *mat->cols + j] = 5 ;
 	}
 	return ;
 }
@@ -57,7 +57,9 @@ struct list * fill_list_coord(struct s_matrix * mat)
 	}
 	return res ;
 }
-
+//struct list* delete_sub_coord(struct list *)
+//{
+//}
 struct coord * propa_coord(struct s_matrix * mat,size_t i ,size_t j,struct coord * coord )
 {
   if (mat->data[i*mat->cols+j] == 3)
@@ -79,4 +81,34 @@ struct coord * propa_coord(struct s_matrix * mat,size_t i ,size_t j,struct coord
   }
   return coord;
 }
+struct list * create_list_barre_mesure(struct s_matrix * mat,struct list * list)
+{
+	struct list * res = malloc(sizeof(struct list));
+	list_init(res);
+	struct list * ptr = list->next;
+	int test = 1;
+	while(ptr != NULL)
+	{
+		struct coord * coord = (struct coord * ) (ptr->data);
+		test = 1;
+		for(size_t i = coord->maxup; i < coord->maxdown; i++)
+		{				
+			for(size_t j = coord->maxleft; j < coord->maxright ; j++)
+			{
+				if(mat->data[i*mat->cols + j] !=3)
+					test = 0;
+			}
+		}
+		if(test)
+		{
+			list_pop_front(ptr);
+			struct list * elm = malloc(sizeof(struct list));
+			elm->next = NULL;
+			elm->data = coord;
+			list_push_front(res,elm);
+		}
 
+		ptr = ptr->next;
+	}
+	return res;
+}	  
