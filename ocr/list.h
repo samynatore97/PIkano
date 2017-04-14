@@ -16,5 +16,5 @@ struct list* list_pop_front(struct list *list);
 struct list * list_find(struct list *list, void * value);
 int list_is_sorted(struct list *list);
 void list_insert(struct list * list, struct list *elm);
-
-#endif
+void print_list_int(struct list* list);
+# endif

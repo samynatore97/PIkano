@@ -13,6 +13,8 @@ SRC =		matrix.c \
 		graph_iden.c  \
 		surface_operations.c \
 		coord.c		\
+		portee.c 	\
+		detection/cle_de_sol.c \
 		main.c
 OBJ = ${SRC:.c=.o}
 DEP = ${SRC:.c=.d}

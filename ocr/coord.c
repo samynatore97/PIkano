@@ -5,6 +5,11 @@ void print_coord(struct coord * coord)
 	printf("coordonnees du coin gauche : %zu, %zu \n", coord->maxup, coord->maxleft);
 	printf("coordonnees du coin droit : %zu , %zu \n", coord->maxdown,coord->maxright); 
 }
+struct coord * coord_init(struct coord * coord)
+{
+	coord->isVert = 0;
+	return coord;
+}
 void  draw_rect(struct s_matrix *mat,struct coord * coord )
 {
 	for (size_t i = coord->maxup ; i <coord->maxdown ;i++)
@@ -35,7 +40,7 @@ struct list * fill_list_coord(struct s_matrix * mat)
 	struct list *res  = malloc (sizeof(struct list));
 	list_init(res);
 	size_t cpt = 0;
-	for (size_t i = 0 ; i<mat->cols ;i++)
+	for (size_t i = 0 ; i<mat->lines ;i++)
 	{
 		for(size_t j = 0 ; j < mat->cols ;j++)
 		{
@@ -43,6 +48,7 @@ struct list * fill_list_coord(struct s_matrix * mat)
 			{
 				struct list *elm = malloc(sizeof(struct list));
 				struct coord * tmp = malloc(sizeof(struct coord ));
+				tmp = coord_init(tmp);
 				tmp->maxup = i;
 				tmp->maxdown = i;
 				tmp->maxleft = j;

@@ -75,3 +75,13 @@ int test = 1;
      
     }
 }
+void print_list_int(struct list * list)
+{
+	struct list * ptr = list->next;
+	while (ptr!= NULL)
+	{
+		size_t tmp = *(size_t *)(ptr->data);
+		printf("%zu\n",tmp);
+		ptr= ptr->next;
+	}
+}

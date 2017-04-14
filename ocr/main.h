@@ -8,5 +8,5 @@
 # include "graph_iden.h"
 # include "surface_operations.h"
 # include "coord.h"
-
+# include "detection/cle_de_sol.h"
 #endif

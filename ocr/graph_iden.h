@@ -2,6 +2,7 @@
 # define GRAPH_IDEN_H_
 
 # include <stdlib.h>
+# include "portee.h"
 # include "matrix.h"
 # include "list.h"
 # include "ligne_iden.h"

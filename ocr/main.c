@@ -50,6 +50,9 @@ int main(int argc, char *argv[])
 	printf("avant : %zu \n",list_len(l2));
 	struct list * l3 = create_list_barre_mesure(bar,l2);
 	printf("len de la liste apres détection des barres de mesures : %zu \n ",list_len(l2));
+	struct s_matrix * sol = detect_cle_sol(bar,l2,13);
+	SDL_Surface * Sol = genImgFromMat(sol);
+	display_image(Sol);
 	struct s_matrix * rect = draw_all_rect(bar,l2);
 	SDL_Surface * rec = genImgFromMat(rect);
 	display_image(rec);

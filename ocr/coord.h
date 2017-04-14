@@ -3,12 +3,14 @@
 # include "matrix.h"
 # include "list.h"
 struct coord{
+		  int isVert;
 		  size_t maxup;
 		  size_t maxdown;
 		  size_t maxleft;
 		  size_t maxright;
 		  size_t numnote;
 };
+struct coord * coord_init(struct coord *coord );
 void print_coord(struct coord * coord);
 void draw_rect(struct s_matrix *mat, struct coord * coord);
 struct s_matrix* draw_all_rect(struct s_matrix * mat, struct list * list);
