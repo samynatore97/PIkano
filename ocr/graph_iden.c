@@ -22,8 +22,6 @@ struct s_matrix* color_graph(SDL_Surface * partition)
   struct s_matrix * histo = histo_hori(real_partition);
   struct list *num_lines ;
   num_lines = ligne_port(histo);
-  print_list_int(num_lines);
-  printf(" Calcul du pas : %zu \n",calcul_pas(num_lines));
   struct s_matrix *color ;
   color = color_line(real_partition, num_lines);
 	for (size_t i = 0 ; i<color->lines ;i++)

@@ -1,13 +1,32 @@
 #include "coord.h"
+#include <unistd.h>
+
 void print_coord(struct coord * coord)
 {
 	printf("coordonnees de la note numero : %zu \n",coord->numnote);
 	printf("coordonnees du coin gauche : %zu, %zu \n", coord->maxup, coord->maxleft);
-	printf("coordonnees du coin droit : %zu , %zu \n", coord->maxdown,coord->maxright); 
+	printf("coordonnees du coin droit : %zu , %zu \n", coord->maxdown,coord->maxright);
+	printf("Nombre de pas : %f \n", coord->nbPas);
+	printf("Nombre de pixels composant la note : %zu \n",coord->nbPixelNoir);
+	printf("Nombre de barres verticales : %zu \n ",coord->nbCol);
+}
+void print_list_coord(struct list * list_coord)
+{
+	struct list * ptr = list_coord->next;
+	while(ptr!=NULL)
+	{
+		struct coord * coord = (struct coord *)ptr->data;
+		print_coord(coord);
+		printf("\n");
+		ptr = ptr->next;
+	}
 }
 struct coord * coord_init(struct coord * coord)
 {
 	coord->isVert = 0;
+	coord->nbPas = 0;
+	coord->nbPixelNoir = 0;
+	coord->nbCol = 0;
 	return coord;
 }
 void  draw_rect(struct s_matrix *mat,struct coord * coord )
@@ -26,11 +45,16 @@ void  draw_rect(struct s_matrix *mat,struct coord * coord )
 }
 struct s_matrix * draw_all_rect(struct s_matrix *mat,struct list * list)
 {
-	 struct list* ptr = list->next;
+	int i ;
+	struct list* ptr = list->next;
 	while(ptr != NULL)
 	{
 		struct coord * coord = (struct coord *)(ptr->data);
+		print_coord(coord);
 		draw_rect(mat,coord);
+		SDL_Surface * update = genImgFromMat(mat);
+		display_image(update);
+		sleep(5);
 		ptr = ptr->next ;
 	}
 	return mat ;
@@ -117,4 +141,73 @@ struct list * create_list_barre_mesure(struct s_matrix * mat,struct list * list)
 		ptr = ptr->next;
 	}
 	return res;
-}	  
+}
+
+void completeInfoCoord(struct s_matrix * mat, struct list * list_coord,size_t pas)
+{
+	struct list * ptr = list_coord->next;
+	while(ptr != NULL)
+	{
+		struct coord * coord = (struct coord *) ptr->data;
+		fillNbPas(coord,pas);
+		fillNbPixelNoir(mat,coord);
+		fillNbCol(mat,coord);
+		ptr = ptr->next;
+	}
+}
+
+void fillNbPas(struct coord * coord, size_t pas)
+{
+	coord->nbPas = ((float)(coord->maxdown - coord->maxup)) / (float) pas ;
+}
+
+void fillNbPixelNoir(struct s_matrix * mat, struct coord * coord)
+{
+	coord->nbPixelNoir = 0 ;
+	for (size_t i = coord->maxup ; i < coord->maxdown ; i++)
+	{
+		for (size_t j = coord->maxleft ; j < coord->maxright ; j++)
+		{
+			if (mat->data[i * mat->cols + j] != 1)
+			{
+				coord->nbPixelNoir++;
+			}
+		}
+	}
+}
+
+void fillNbCol(struct s_matrix * mat, struct coord * coord)
+{
+	if(coord->isVert)
+	{
+		coord->nbCol = 0;
+		int test = 0;
+		for(size_t j = coord->maxleft ; j < coord->maxright ; j++)
+		{
+			size_t cpt = 0;
+			for (size_t i = coord->maxup ; i < coord->maxdown ; i++)
+			{
+				if(mat->data[i * mat->cols + j] == 3 && !test)
+				{
+					test = 1;
+					coord->nbCol++;
+				}
+
+				if(mat->data[i * mat->cols + j]!=3)
+				{
+					cpt++;
+				}
+
+
+			}
+			if (cpt == coord->maxdown - coord->maxup)
+			{
+				test = 0;
+			}
+		}
+	}
+	else
+	{
+		coord->nbCol = 0;
+	}
+}
