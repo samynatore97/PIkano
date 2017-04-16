@@ -49,8 +49,6 @@ struct list * ligne_port(struct s_matrix* mat)
 
 struct s_matrix* color_line(struct s_matrix * partition, struct list* list)
 {
-//	struct s_matrix * partition;
-//	partition = matrix_copy(mat);
    struct list* ptr  = list->next;
 	while(ptr != NULL)
 	{

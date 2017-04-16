@@ -26,6 +26,6 @@ struct list * fill_list_coord(struct s_matrix * mat);
 struct list * create_list_barre_mesure(struct s_matrix *mat,struct list * list);
 void completeInfoCoord(struct s_matrix * mat,struct list * list_coord, size_t pas);
 void fillNbPas(struct coord * coord, size_t pas);
-void fillNbPixelNoir(struct s_matrix * mat,struct coord * coord);
+void fillNbPixelNoir(struct s_matrix * mat,struct coord * coord, size_t pas);
 void fillNbCol(struct s_matrix * mat, struct coord * coord);
 # endif

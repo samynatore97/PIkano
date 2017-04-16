@@ -129,7 +129,7 @@ void matrix_init(struct s_matrix *mat, size_t lines, size_t columns)
 struct s_matrix *matrix_copy(struct s_matrix *src)
 {
 	struct s_matrix *cpy;
-	if(NULL != src)
+	if(src != NULL )
 	{
 		cpy = malloc(sizeof(struct s_matrix));
 		matrix_init(cpy,src->lines, src->cols);

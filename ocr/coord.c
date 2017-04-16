@@ -1,6 +1,5 @@
 #include "coord.h"
 #include <unistd.h>
-
 void print_coord(struct coord * coord)
 {
 	printf("coordonnees de la note numero : %zu \n",coord->numnote);
@@ -45,16 +44,16 @@ void  draw_rect(struct s_matrix *mat,struct coord * coord )
 }
 struct s_matrix * draw_all_rect(struct s_matrix *mat,struct list * list)
 {
-	int i ;
 	struct list* ptr = list->next;
 	while(ptr != NULL)
 	{
+		struct s_matrix * cpy = matrix_copy(mat);
 		struct coord * coord = (struct coord *)(ptr->data);
 		print_coord(coord);
-		draw_rect(mat,coord);
-		SDL_Surface * update = genImgFromMat(mat);
+		draw_rect(cpy,coord);
+		SDL_Surface * update = genImgFromMat(cpy);
 		display_image(update);
-		sleep(5);
+
 		ptr = ptr->next ;
 	}
 	return mat ;
@@ -149,9 +148,9 @@ void completeInfoCoord(struct s_matrix * mat, struct list * list_coord,size_t pa
 	while(ptr != NULL)
 	{
 		struct coord * coord = (struct coord *) ptr->data;
-		fillNbPas(coord,pas);
-		fillNbPixelNoir(mat,coord);
-		fillNbCol(mat,coord);
+		fillNbPas(coord, pas);
+		fillNbPixelNoir(mat, coord, pas);
+		fillNbCol(mat, coord);
 		ptr = ptr->next;
 	}
 }
@@ -161,7 +160,7 @@ void fillNbPas(struct coord * coord, size_t pas)
 	coord->nbPas = ((float)(coord->maxdown - coord->maxup)) / (float) pas ;
 }
 
-void fillNbPixelNoir(struct s_matrix * mat, struct coord * coord)
+void fillNbPixelNoir(struct s_matrix * mat, struct coord * coord, size_t pas)
 {
 	coord->nbPixelNoir = 0 ;
 	for (size_t i = coord->maxup ; i < coord->maxdown ; i++)
@@ -174,6 +173,7 @@ void fillNbPixelNoir(struct s_matrix * mat, struct coord * coord)
 			}
 		}
 	}
+	coord->nbPixelNoir /= pas; 
 }
 
 void fillNbCol(struct s_matrix * mat, struct coord * coord)

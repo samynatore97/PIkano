@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-	if(argc <1)
+	if(argc < 2)
 		 err(1,"must provide an img");
 	char* path = argv[1];
 /*	SDL_Surface* img = load_image(path);
@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
 	SDL_Surface * partitionGS = generateGrayScaleImage(partition1);
 	SDL_Surface *partition = generateBlackAndWhiteFromGS(partitionGS);
 	display_image(partition);
-
 	struct s_matrix * histo = build_histo_hori(partition);
-	SDL_Surface *histo_hori = build_img_histo_hori(histo);
+	struct s_matrix * cpy = matrix_copy(histo);
+	SDL_Surface *histo_hori = build_img_histo_hori(cpy);
 	display_image(histo_hori);
 	struct s_matrix *color =  build_color_line(partition);
 	SDL_Surface * partition_color = build_img_color_line(color);
@@ -43,11 +43,11 @@ int main(int argc, char *argv[])
 //	SDL_Surface *rec = genImgFromMat(rect);
 //	display_image(rec);
 
-	struct s_matrix *bar = delete_vert_graph(prey, l2);
+	struct s_matrix *bar = delete_vert_graph(prey, l2); 
 	SDL_Surface * barr = genImgFromMat(prey);
 	display_image(barr);
 //refais ta liste de ligne de portée fdp
-	struct list * num_lines = ligne_port(histo);
+	struct list * num_lines = ligne_port(cpy);
 	size_t pas = calcul_pas(num_lines);
 	printf("Pas : %zu",pas);
 	completeInfoCoord(bar,l2,pas);
