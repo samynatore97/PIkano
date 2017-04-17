@@ -11,4 +11,5 @@
 # include "coord.h"
 # include "detection/cle_de_sol.h"
 # include "portee.h"
+# include "output.h"
 #endif

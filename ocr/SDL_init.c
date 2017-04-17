@@ -55,7 +55,7 @@ SDL_Surface* display_image(SDL_Surface *img) {
   SDL_UpdateRect(screen, 0, 0, img->w, img->h);
  
   // wait for a key
-  wait_for_keypressed();
+//  wait_for_keypressed();
  
   // return the screen for further uses
   return screen;

@@ -63,8 +63,9 @@ int main(int argc, char *argv[])
 	
 */
 	display_all_rect(bar,l2);
-	struct s_matrix * rect = draw_all_rect(bar,l2);
-	SDL_Surface * rec = genImgFromMat(rect);
-	display_image(rec);
+	create_file_note(l2,path);
+//	struct s_matrix * rect = draw_all_rect(bar,l2);
+//	SDL_Surface * rec = genImgFromMat(rect);
+//	display_image(rec);
 	return 0; 
 }
