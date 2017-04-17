@@ -58,6 +58,32 @@ struct s_matrix * draw_all_rect(struct s_matrix *mat,struct list * list)
 	}
 	return mat ;
 }
+struct s_matrix * get_mat_rect(struct s_matrix * mat, struct coord * coord)
+{
+	struct s_matrix * res = malloc(sizeof(struct s_matrix));
+	 matrix_init(res, (coord->maxdown - coord->maxup), (coord->maxright - coord->maxleft));
+	for(size_t i = 0 ; i < res->lines;i++)
+	{
+		for (size_t j = 0 ; j < res->cols; j++)
+		{
+			res->data[i*res->cols + j] = mat->data[(i + coord->maxup)*mat->cols + (j + coord->maxleft)];
+		}
+	}
+	return res ; 
+}
+void display_all_rect(struct s_matrix * mat,struct list * list_coord)
+{
+	struct list * ptr = list_coord->next;
+	while(ptr != NULL)
+	{
+		struct coord * coord = (struct coord *) ptr->data;
+		struct s_matrix *rect = get_mat_rect(mat, coord);
+		print_matrix(rect);
+		SDL_Surface * update = genImgFromMat(rect);
+		display_image(update);
+		ptr = ptr->next;
+	}
+}
 struct list * fill_list_coord(struct s_matrix * mat)
 {
 	struct list *res  = malloc (sizeof(struct list));

@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	display_image(partition);
 	struct s_matrix * histo = build_histo_hori(partition);
 	struct s_matrix * cpy = matrix_copy(histo);
-	SDL_Surface *histo_hori = build_img_histo_hori(cpy);
+	SDL_Surface *histo_hori = build_img_histo_hori(histo);
 	display_image(histo_hori);
 	struct s_matrix *color =  build_color_line(partition);
 	SDL_Surface * partition_color = build_img_color_line(color);
@@ -62,6 +62,7 @@ int main(int argc, char *argv[])
 	display_image(Sol);
 	
 */
+	display_all_rect(bar,l2);
 	struct s_matrix * rect = draw_all_rect(bar,l2);
 	SDL_Surface * rec = genImgFromMat(rect);
 	display_image(rec);
