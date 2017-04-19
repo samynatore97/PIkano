@@ -1,33 +1,51 @@
 # include "perceptron.h"
-
-void sortie_fn_losig(struct perceptron *percep)
+struct perceptron * initialisation(size_t dimension)
 {
-	struct list * ptr_entrees = percep->entrees->next;
-	int seuil = *(int *)ptr_entrees->data ;
-	struct list * ptr_poids = percep->poids->next;
-	double somme = 0;
-	while(ptr_entrees != NULL || ptr_poids != NULL)
+	struct perceptron * percep = malloc(sizeof(struct perceptron));
+	percep->dim = dimension;
+	percep->poids = malloc(dimension * sizeof(double));
+	for (size_t i = 0; i < dimension; i++)
 	{
-		int  entree = * (int *)ptr_entrees->data;
-		double poids = * (double *) ptr_poids->data;
-		somme += entree*poids;
-		ptr_entrees = ptr_entrees->next;
-		ptr_poids = ptr_poids->next;
+		percep->poids[i] = (double) rand()/(double) RAND_MAX;
 	}
+	return percep;
+}
+void sortie_fn_losig(struct perceptron *percep, struct coord * coord)
+{
+	
+	double somme = coord->typeNote * percep->poids[0] + 
+			  coord->nbPas * percep->poids[1] +
+			  coord->nbPixelNoir * percep->poids[2] +
+			  coord->nbCol * percep->poids[3] ;
 	percep->sortie =  (seuil/(1+ exp(-somme)));
 }
 
-void ajustement_poids(struct perceptron * percep, int souhait)
+void ajustement_poids(struct perceptron * percep, struct coord * coord, int souhait, double epsilon)
 {
-	struct list * ptr_poids = percep->poids->next;
-	struct list * ptr_entrees = percep->entrees->next;
-	while(ptr_poids != NULL || ptr_entrees != NULL)
+	percep->poids[0] = percep->poids[0] + epsilon * (souhait - percep->sortie) *
+			   coord->typeNote * percep->sortie * (1 - percep->sortie);
+	percep->poids[1] = percep->poids[1] + epsilon * (souhait - percep->sortie) *
+			   coord->nbPas * percep->sortie * (1 - percep->sortie);
+	percep->poids[2] = percep->poids[2] + epsilon * (souhait - percep->sortie) *
+			   coord->nbPixelNoir * percep->sortie * (1 - percep->sortie);
+	percep->poids[3] = percep->poids[3] + epsilon * (souhait - percep->sortie) *
+			   coord->nbCol * percep->sortie * (1 - percep->sortie);
+}
+
+void apprentissage(struct list * entrees)
+{
+	struct perceptron * tab_percep[TAILLE];
+	for(size_t i = 0 ; i < TAILLE; i++)
 	{
-		double poids = *(double *) ptr_poids->data;
-		int entree = * (int *) ptr_entrees->data;
-		poids = poids + percep->epsilon * (souhait - percep->sortie) * entree * percep->sortie * (1 - percep->sortie) ;
-		*ptr_poids->data = poids;
-		ptr_entrees = ptr_entrees->next;
-		ptr_poids = ptr_poids->next;
+		tab_percep[i] = initialisation(4);
+
 	}
+   struct list * ptr_entrees = entrees->next;
+	while(ptr_entrees != NULL)
+	{
+		struct coord * coord = (struct coord *) ptr_entrees->data;
+		for (size_t i = 0; i < TAILLE; i++)
+			ajustement_poids(tab_percep[i], coord , i == coord->typeNote + 1 ? coord->typeNote : 0, 0.02);
+	}
+	
 }
