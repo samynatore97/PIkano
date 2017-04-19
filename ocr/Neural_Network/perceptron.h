@@ -1,19 +1,20 @@
 # ifndef PERCEPTRON_H_
 # define PERCEPTRON_H_
+# include <math.h>
+# include <stdlib.h>
+# include <stdio.h>
 # include "../list.h"
 # include "../coord.h"
-# include <stdlib.h>
-# include <math.h>
 # define TAILLE 8
 struct perceptron
 {
 	double * poids;
 	size_t dim;
-	double (*fn)(struct  perceptron*);
+//	double (*fn)(struct  perceptron*);
 	double sortie;
 };
 struct perceptron * initialisation(size_t dimension);
 void sortie_fn_losig(struct perceptron * percep, struct coord * coord);
 void ajustement_poids(struct perceptron * percep, struct coord * coord, int souhait,double epsilon);
-void apprentissage(struct list * entrees);
-#endif
+struct perceptron **  apprentissage(struct list * entrees);
+# endif

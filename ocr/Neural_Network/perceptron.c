@@ -1,4 +1,5 @@
 # include "perceptron.h"
+
 struct perceptron * initialisation(size_t dimension)
 {
 	struct perceptron * percep = malloc(sizeof(struct perceptron));
@@ -17,7 +18,7 @@ void sortie_fn_losig(struct perceptron *percep, struct coord * coord)
 			  coord->nbPas * percep->poids[1] +
 			  coord->nbPixelNoir * percep->poids[2] +
 			  coord->nbCol * percep->poids[3] ;
-	percep->sortie =  (seuil/(1+ exp(-somme)));
+	percep->sortie =  (1.0/(1.0+ exp(-somme)));
 }
 
 void ajustement_poids(struct perceptron * percep, struct coord * coord, int souhait, double epsilon)
@@ -32,9 +33,9 @@ void ajustement_poids(struct perceptron * percep, struct coord * coord, int souh
 			   coord->nbCol * percep->sortie * (1 - percep->sortie);
 }
 
-void apprentissage(struct list * entrees)
+struct perceptron ** apprentissage(struct list * entrees)
 {
-	struct perceptron * tab_percep[TAILLE];
+	struct perceptron **  tab_percep = malloc(sizeof(struct perceptron *) * TAILLE) ;
 	for(size_t i = 0 ; i < TAILLE; i++)
 	{
 		tab_percep[i] = initialisation(4);
@@ -44,8 +45,13 @@ void apprentissage(struct list * entrees)
 	while(ptr_entrees != NULL)
 	{
 		struct coord * coord = (struct coord *) ptr_entrees->data;
-		for (size_t i = 0; i < TAILLE; i++)
-			ajustement_poids(tab_percep[i], coord , i == coord->typeNote + 1 ? coord->typeNote : 0, 0.02);
+		for (int i = 0; i < TAILLE; i++)
+		{
+			sortie_fn_losig(tab_percep[i],coord);
+			ajustement_poids(tab_percep[i], coord , (i == (coord->typeNote - 1)) ? coord->typeNote : 0, 0.1);
+		}
+		ptr_entrees = ptr_entrees->next;
 	}
+	return tab_percep;
 	
 }

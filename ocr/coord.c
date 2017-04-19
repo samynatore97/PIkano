@@ -7,7 +7,8 @@ void print_coord(struct coord * coord)
 //	printf("coordonnees du coin droit : %zu , %zu \n", coord->maxdown,coord->maxright);
 	printf("Nombre de pas : %f \n", coord->nbPas);
 	printf("Ratio PixelNoir/Pixelblanc: %f \n",coord->nbPixelNoir);
-	printf("Nombre de barres verticales : %zu \n  \n",coord->nbCol);
+	printf("Nombre de barres verticales : %zu \n",coord->nbCol);
+	printf("Type de note : %d \n \n",coord->typeNote); 
 }
 void print_list_coord(struct list * list_coord)
 {

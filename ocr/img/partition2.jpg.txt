@@ -1,1195 +1,239 @@
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.418182 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 3.650000 
-Ratio PixelNoir/Pixelblanc: 0.478769 
-Nombre de barres verticales : 1 
-Type de note : 5 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.432653 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.432069 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.432069 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.270040 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 1.100000 
-Ratio PixelNoir/Pixelblanc: 1.062500 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 0.050000 
-Ratio PixelNoir/Pixelblanc: 2.000000 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.245708 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.370720 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.230084 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.230084 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.350000 
-Ratio PixelNoir/Pixelblanc: 0.500958 
-Nombre de barres verticales : 3 
-Type de note : 0 
- 
-Nombre de pas : 0.550000 
-Ratio PixelNoir/Pixelblanc: 297.000000 
-Nombre de barres verticales : 1 
-Type de note : 6 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.326781 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 0.550000 
-Ratio PixelNoir/Pixelblanc: 297.000000 
-Nombre de barres verticales : 1 
-Type de note : 6 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.370720 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.337558 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 7.350000 
-Ratio PixelNoir/Pixelblanc: 0.363636 
-Nombre de barres verticales : 0 
-Type de note : 4 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.415893 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417037 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 3.650000 
-Ratio PixelNoir/Pixelblanc: 0.479345 
-Nombre de barres verticales : 1 
-Type de note : 5 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.629156 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.432653 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.433824 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.272076 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.272076 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.269740 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.270341 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 0.550000 
-Ratio PixelNoir/Pixelblanc: 297.000000 
-Nombre de barres verticales : 1 
-Type de note : 6 
- 
-Nombre de pas : 0.550000 
-Ratio PixelNoir/Pixelblanc: 297.000000 
-Nombre de barres verticales : 1 
-Type de note : 6 
- 
-Nombre de pas : 0.550000 
-Ratio PixelNoir/Pixelblanc: 297.000000 
-Nombre de barres verticales : 1 
-Type de note : 6 
- 
-Nombre de pas : 3.100000 
-Ratio PixelNoir/Pixelblanc: 0.574048 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 3.100000 
-Ratio PixelNoir/Pixelblanc: 0.574048 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 3.150000 
-Ratio PixelNoir/Pixelblanc: 0.557692 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 3.150000 
-Ratio PixelNoir/Pixelblanc: 0.557692 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.371530 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.370720 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.400000 
-Ratio PixelNoir/Pixelblanc: 0.637795 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.337558 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.337558 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.371530 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 5.400000 
-Ratio PixelNoir/Pixelblanc: 0.247082 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.271817 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.271817 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 5.400000 
-Ratio PixelNoir/Pixelblanc: 0.247082 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.271817 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 7.350000 
-Ratio PixelNoir/Pixelblanc: 0.363866 
-Nombre de barres verticales : 0 
-Type de note : 4 
- 
-Nombre de pas : 5.950000 
-Ratio PixelNoir/Pixelblanc: 0.217626 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417037 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417037 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 3.650000 
-Ratio PixelNoir/Pixelblanc: 0.479345 
-Nombre de barres verticales : 1 
-Type de note : 5 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.432653 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.433238 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.272076 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.272380 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.270641 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 1.100000 
-Ratio PixelNoir/Pixelblanc: 1.062500 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 0.550000 
-Ratio PixelNoir/Pixelblanc: 0.313433 
-Nombre de barres verticales : 0 
-Type de note : -1 
- 
-Nombre de pas : 0.050000 
-Ratio PixelNoir/Pixelblanc: 2.000000 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 1.100000 
-Ratio PixelNoir/Pixelblanc: 1.062500 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 0.050000 
-Ratio PixelNoir/Pixelblanc: 2.000000 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.369104 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.350000 
-Ratio PixelNoir/Pixelblanc: 0.500958 
-Nombre de barres verticales : 3 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.370720 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.274507 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.274151 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.326781 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 4.350000 
-Ratio PixelNoir/Pixelblanc: 0.254808 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.326781 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 2.600000 
-Ratio PixelNoir/Pixelblanc: 0.674419 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 3.150000 
-Ratio PixelNoir/Pixelblanc: 0.557692 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 3.150000 
-Ratio PixelNoir/Pixelblanc: 0.557692 
-Nombre de barres verticales : 0 
-Type de note : 2 
- 
-Nombre de pas : 4.350000 
-Ratio PixelNoir/Pixelblanc: 0.500958 
-Nombre de barres verticales : 3 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.245040 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.274329 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.223811 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.370720 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.608586 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.222210 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.338329 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.337558 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 7.350000 
-Ratio PixelNoir/Pixelblanc: 0.363866 
-Nombre de barres verticales : 0 
-Type de note : 4 
- 
-Nombre de pas : 5.650000 
-Ratio PixelNoir/Pixelblanc: 0.281058 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.400000 
-Ratio PixelNoir/Pixelblanc: 0.637795 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417037 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 3.650000 
-Ratio PixelNoir/Pixelblanc: 0.479345 
-Nombre de barres verticales : 1 
-Type de note : 5 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.433824 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.272076 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.269740 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252321 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252170 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252170 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252321 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.204431 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.204431 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252623 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252321 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.250000 
-Ratio PixelNoir/Pixelblanc: 0.224864 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 7.350000 
-Ratio PixelNoir/Pixelblanc: 0.363636 
-Nombre de barres verticales : 0 
-Type de note : -1 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.262680 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.262680 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.262680 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417037 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.418182 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 3.650000 
-Ratio PixelNoir/Pixelblanc: 0.479345 
-Nombre de barres verticales : 1 
-Type de note : 5 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.629156 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.272076 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.269740 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 1.100000 
-Ratio PixelNoir/Pixelblanc: 1.062500 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 0.050000 
-Ratio PixelNoir/Pixelblanc: 2.000000 
-Nombre de barres verticales : 1 
-Type de note : -1 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252472 
-Nombre de barres verticales : 2 
-Type de note : -1 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252321 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252321 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252170 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252472 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.900000 
-Ratio PixelNoir/Pixelblanc: 0.252321 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.350000 
-Ratio PixelNoir/Pixelblanc: 0.500958 
-Nombre de barres verticales : 3 
-Type de note : 0 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.323529 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 6.550000 
-Ratio PixelNoir/Pixelblanc: 0.190909 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.203261 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.400000 
-Ratio PixelNoir/Pixelblanc: 0.637795 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 7.350000 
-Ratio PixelNoir/Pixelblanc: 0.363866 
-Nombre de barres verticales : 0 
-Type de note : 4 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.262680 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.262680 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 4.850000 
-Ratio PixelNoir/Pixelblanc: 0.262680 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.100000 
-Ratio PixelNoir/Pixelblanc: 0.653543 
-Nombre de barres verticales : 0 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.625000 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417609 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417609 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.417037 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.100000 
-Ratio PixelNoir/Pixelblanc: 0.930269 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 3.650000 
-Ratio PixelNoir/Pixelblanc: 0.479345 
-Nombre de barres verticales : 1 
-Type de note : 5 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 2.100000 
-Ratio PixelNoir/Pixelblanc: 0.651376 
-Nombre de barres verticales : 0 
-Type de note : 0 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.326781 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.328413 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 2.000000 
-Ratio PixelNoir/Pixelblanc: 0.321909 
-Nombre de barres verticales : 0 
-Type de note : 7 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.203261 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.204431 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.000000 
-Ratio PixelNoir/Pixelblanc: 0.203036 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.608586 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.247484 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.248223 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 4.300000 
-Ratio PixelNoir/Pixelblanc: 0.247484 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 2.100000 
-Ratio PixelNoir/Pixelblanc: 0.936407 
-Nombre de barres verticales : 1 
-Type de note : 0 
- 
-Nombre de pas : 4.400000 
-Ratio PixelNoir/Pixelblanc: 176.000000 
-Nombre de barres verticales : 1 
-Type de note : 3 
- 
-Nombre de pas : 2.450000 
-Ratio PixelNoir/Pixelblanc: 0.633333 
-Nombre de barres verticales : 1 
-Type de note : 1 
- 
-Nombre de pas : 7.350000 
-Ratio PixelNoir/Pixelblanc: 0.363866 
-Nombre de barres verticales : 0 
-Type de note : 4 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.187063 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.131515 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
-Nombre de pas : 6.500000 
-Ratio PixelNoir/Pixelblanc: 0.186658 
-Nombre de barres verticales : 2 
-Type de note : 0 
- 
+2.450000 0.625000 1 1 
+6.500000 0.418182 1 8 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+3.650000 0.478769 1 5 
+4.400000 176.000000 1 3 
+2.450000 0.633333 1 1 
+6.500000 0.432653 1 8 
+6.500000 0.432069 1 8 
+6.500000 0.432069 1 8 
+6.550000 0.270040 1 8 
+1.100000 1.062500 1 -1 
+0.050000 2.000000 1 -1 
+4.300000 0.245708 1 8 
+4.300000 0.370720 1 8 
+4.900000 0.230084 2 8 
+4.900000 0.230084 2 8 
+4.350000 0.500958 3 8 
+0.550000 297.000000 1 6 
+2.000000 0.326781 0 7 
+0.550000 297.000000 1 6 
+4.300000 0.370720 1 8 
+2.450000 0.625000 1 1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.300000 0.337558 1 8 
+2.450000 0.633333 1 1 
+7.350000 0.363636 0 4 
+2.450000 0.625000 1 1 
+6.500000 0.415893 1 8 
+6.500000 0.417037 1 8 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+3.650000 0.479345 1 5 
+4.400000 176.000000 1 3 
+2.450000 0.629156 1 1 
+6.500000 0.432653 1 8 
+6.500000 0.433824 1 8 
+6.500000 0.272076 1 8 
+6.500000 0.272076 1 8 
+6.550000 0.269740 1 8 
+6.550000 0.270341 1 8 
+0.550000 297.000000 1 6 
+0.550000 297.000000 1 6 
+0.550000 297.000000 1 6 
+3.100000 0.574048 0 2 
+3.100000 0.574048 0 2 
+3.150000 0.557692 0 2 
+3.150000 0.557692 0 2 
+4.300000 0.371530 1 8 
+4.300000 0.370720 1 8 
+2.400000 0.637795 1 1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.300000 0.337558 1 -1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.300000 0.337558 1 -1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.300000 0.371530 1 -1 
+5.400000 0.247082 2 8 
+4.850000 0.271817 2 8 
+4.850000 0.271817 2 8 
+5.400000 0.247082 2 8 
+4.850000 0.271817 2 8 
+2.450000 0.633333 1 1 
+7.350000 0.363866 0 4 
+5.950000 0.217626 2 8 
+2.450000 0.625000 1 1 
+6.500000 0.417037 1 -1 
+6.500000 0.417037 1 8 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+3.650000 0.479345 1 5 
+4.400000 176.000000 1 3 
+2.450000 0.633333 1 -1 
+6.500000 0.432653 1 -1 
+6.500000 0.433238 1 8 
+6.500000 0.272076 1 8 
+6.500000 0.272380 1 8 
+6.550000 0.270641 1 8 
+1.100000 1.062500 1 -1 
+0.550000 0.313433 0 -1 
+0.050000 2.000000 1 -1 
+1.100000 1.062500 1 -1 
+0.050000 2.000000 1 -1 
+4.300000 0.369104 1 -1 
+4.350000 0.500958 3 8 
+4.300000 0.370720 1 8 
+4.900000 0.274507 2 8 
+4.900000 0.274151 2 8 
+2.000000 0.326781 0 7 
+4.350000 0.254808 1 8 
+2.000000 0.326781 0 7 
+2.600000 0.674419 0 -1 
+3.150000 0.557692 0 -1 
+3.150000 0.557692 0 2 
+4.350000 0.500958 3 8 
+4.300000 0.245040 1 8 
+4.900000 0.274329 2 8 
+6.000000 0.223811 2 8 
+4.300000 0.370720 1 8 
+2.450000 0.608586 1 1 
+4.400000 176.000000 1 -1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+6.000000 0.222210 2 8 
+4.300000 0.338329 1 8 
+4.300000 0.337558 1 8 
+2.450000 0.633333 1 1 
+7.350000 0.363866 0 4 
+5.650000 0.281058 2 8 
+2.400000 0.637795 1 1 
+6.500000 0.417037 1 8 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+3.650000 0.479345 1 -1 
+4.400000 176.000000 1 -1 
+2.450000 0.633333 1 -1 
+6.500000 0.433824 1 8 
+6.500000 0.272076 1 -1 
+6.550000 0.269740 1 8 
+4.900000 0.252321 2 8 
+4.900000 0.252170 2 8 
+4.900000 0.252170 2 8 
+4.900000 0.252321 2 8 
+6.000000 0.204431 2 8 
+6.000000 0.204431 2 8 
+4.900000 0.252623 2 8 
+4.900000 0.252321 2 8 
+6.250000 0.224864 2 8 
+2.450000 0.625000 1 1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+2.450000 0.633333 1 1 
+7.350000 0.363636 0 -1 
+4.850000 0.262680 2 8 
+4.850000 0.262680 2 8 
+4.850000 0.262680 2 8 
+2.450000 0.625000 1 1 
+6.500000 0.417037 1 8 
+6.500000 0.418182 1 8 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+3.650000 0.479345 1 -1 
+4.400000 176.000000 1 -1 
+2.450000 0.629156 1 -1 
+6.500000 0.272076 1 8 
+6.550000 0.269740 1 8 
+1.100000 1.062500 1 -1 
+0.050000 2.000000 1 -1 
+4.900000 0.252472 2 -1 
+4.900000 0.252321 2 8 
+4.900000 0.252321 2 8 
+4.900000 0.252170 2 8 
+4.900000 0.252472 2 8 
+4.900000 0.252321 2 8 
+4.350000 0.500958 3 8 
+2.000000 0.323529 0 7 
+6.550000 0.190909 2 8 
+6.000000 0.203261 2 8 
+2.400000 0.637795 1 1 
+4.400000 176.000000 1 -1 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+2.450000 0.633333 1 -1 
+7.350000 0.363866 0 4 
+4.850000 0.262680 2 8 
+4.850000 0.262680 2 8 
+4.850000 0.262680 2 8 
+2.100000 0.653543 0 8 
+2.450000 0.625000 1 1 
+6.500000 0.417609 1 -1 
+6.500000 0.417609 1 8 
+6.500000 0.417037 1 8 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+4.400000 176.000000 1 3 
+2.100000 0.930269 1 -1 
+3.650000 0.479345 1 5 
+4.400000 176.000000 1 -1 
+2.450000 0.633333 1 1 
+2.100000 0.651376 0 -1 
+2.000000 0.326781 0 7 
+2.000000 0.328413 0 7 
+2.000000 0.321909 0 7 
+6.000000 0.203261 2 -1 
+6.000000 0.204431 2 8 
+6.000000 0.203036 2 8 
+2.450000 0.608586 1 1 
+4.400000 176.000000 1 3 
+4.300000 0.247484 1 -1 
+4.400000 176.000000 1 3 
+4.300000 0.248223 1 8 
+4.400000 176.000000 1 3 
+4.300000 0.247484 1 -1 
+2.100000 0.936407 1 8 
+4.400000 176.000000 1 -1 
+2.450000 0.633333 1 -1 
+7.350000 0.363866 0 -1 
+6.500000 0.187063 2 8 
+6.500000 0.131515 2 8 
+6.500000 0.186658 2 8 

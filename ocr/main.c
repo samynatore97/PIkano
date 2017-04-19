@@ -4,6 +4,8 @@ int main(int argc, char *argv[])
 {
 	if(argc < 2)
 		 err(1,"must provide an img");
+	else if(argc == 2)
+	{
 	char* path = argv[1];
 /*	SDL_Surface* img = load_image(path);
 	struct s_matrix* real_partition = genMatFromImg(img);
@@ -62,10 +64,38 @@ int main(int argc, char *argv[])
 	display_image(Sol);
 	
 */
-	display_all_rect(bar,l2);
-	create_file_note(l2,path);
+	//display_all_rect(bar,l2);
+	//create_file_note(l2,path);
+	struct list * l3 = genListFromFile(path);
+	print_list_coord(l3);
 //	struct s_matrix * rect = draw_all_rect(bar,l2);
 //	SDL_Surface * rec = genImgFromMat(rect);
 //	display_image(rec);
+	}
+	else
+	{
+		char * path = argv[1];
+		struct list * list_coord = genListFromFile(path);
+		struct perceptron ** percep;
+		int i = 0;
+		while (i < 20000)
+		{
+			percep = apprentissage(list_coord);
+			i++;
+		}
+		struct list * ptr = list_coord->next;
+		while (ptr != NULL)
+		{
+			struct coord * coord = (struct coord *)ptr->data;
+			printf("Type de note : %d \n",coord->typeNote);
+			for (int i = 0 ; i < 8; i++)
+			{
+				sortie_fn_losig(percep[i],coord);
+				printf(" sortie %lf  \n",percep[i]->sortie);
+			}
+			printf("\n");
+			ptr = ptr->next;
+		}
+	}
 	return 0; 
 }
