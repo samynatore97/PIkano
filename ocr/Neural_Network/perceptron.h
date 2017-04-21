@@ -8,13 +8,17 @@
 # define TAILLE 8
 struct perceptron
 {
+	double * entrees;
 	double * poids;
 	size_t dim;
 //	double (*fn)(struct  perceptron*);
 	double sortie;
+	double seuil;
 };
 struct perceptron * initialisation(size_t dimension);
-void sortie_fn_losig(struct perceptron * percep, struct coord * coord);
-void ajustement_poids(struct perceptron * percep, struct coord * coord, int souhait,double epsilon);
-struct perceptron **  apprentissage(struct list * entrees);
+void sortie_fn_losig(struct perceptron * percep);
+void ajustement_poids(struct perceptron * percep,int souhait,double epsilon);
+struct perceptron ** init_reseau(size_t dimension);
+void maj_entrees_reseau(struct perceptron ** tab_percep, double * entrees);
+void  apprentissage(struct perceptron ** tab_percep, int souhait);
 # endif

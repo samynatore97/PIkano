@@ -207,8 +207,7 @@ void fillNbPixelNoir(struct s_matrix * mat, struct coord * coord)
 			}
 		}
 	}
-	if (cpt)
-	coord->nbPixelNoir /= cpt; 
+	coord->nbPixelNoir /=cpt + coord->nbPixelNoir ;
 }
 
 void fillNbCol(struct s_matrix * mat, struct coord * coord)
