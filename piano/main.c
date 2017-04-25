@@ -746,15 +746,15 @@ int main() //main function
 
                  break;
              case SDL_KEYDOWN:
-                 error_img(screen,1);
-                    
-                 position.x=30;
-                 position.y=8;
-                 /* typing the path */
-                 int key=event.key.keysym.unicode;
-				 ///// IF MOUSE.POS == WRITERECT (pour pouvoir jouer du son avec les touches) /////
-				 //char** tab=malloc(
-				 
+                error_img(screen,1);
+              
+                position.x=30;
+                position.y=8;
+		        int x,y=0;
+                /* typing the path */
+                int key=event.key.keysym.unicode; 
+				SDL_GetMouseState(&x,&y);
+				if(x>=10 && x<=620 && y>=5 && y<=30){		 
 				 if(( key >= (Uint16)'A' ) && ( key <= (Uint16)'Z' ))
                  {
                   inputText = realloc(inputText,2*k+1*sizeof(char));
@@ -827,7 +827,11 @@ int main() //main function
                   path_write(screen);
                   text = TTF_RenderText_Blended(police, inputText, white);
                   SDL_BlitSurface(text, NULL, screen, &position);
-                  SDL_Flip(screen);               
+                  SDL_Flip(screen);
+			   }
+				else {
+					
+			   }
                break;
              case SDL_QUIT:
                  test_int = 0;
