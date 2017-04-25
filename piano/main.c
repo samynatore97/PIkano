@@ -832,7 +832,13 @@ int main() //main function
 		 	   }
 				else {
 				  	  
-				  const char *tab[]={"sons/do1.wav","sons/re1.wav","sons/mi1.wav","sons/fa1.wav","sons/so1.wav","sons/la1.wav","sons/si1.wav","sons/do2.wav","sons/re2.wav","sons/mi2.wav","sons/fa2.wav","sons/so2.wav","sons/la2.wav","sons/si2.wav","sons/do3.wav","sons/re3.wav","sons/mi3.wav","sons/fa3.wav","sons/so3.wav","sons/la3.wav","sons/si3.wav","sons/do4.wav","sons/re4.wav","sons/mi4.wav","sons/fa4.wav","sons/so4.wav","sons/la4.wav","sons/si4.wav","sons/db1.wav","sons/rb1.wav","sons/fb1.wav","sons/sb1.wav","sons/lb1.wav","sons/db2.wav","sons/rb2.wav","sons/fb2.wav","sons/sb2.wav","sons/lb2.wav","sons/db3.wav","sons/rb3.wav","sons/fb3.wav","sons/sb3.wav","sons/lb3.wav","sons/db4.wav","sons/rb4.wav","sons/fb4.wav","sons/sb4.wav","sons/lb4.wav"};
+				  const char *tab[]={"sons/do1.wav","sons/re1.wav","sons/mi1.wav","sons/fa1.wav","sons/so1.wav","sons/la1.wav",
+						  "sons/si1.wav","sons/do2.wav","sons/re2.wav","sons/mi2.wav","sons/fa2.wav","sons/so2.wav","sons/la2.wav",
+						  "sons/si2.wav","sons/do3.wav","sons/re3.wav","sons/mi3.wav","sons/fa3.wav","sons/so3.wav","sons/la3.wav",
+						  "sons/si3.wav","sons/do4.wav","sons/re4.wav","sons/mi4.wav","sons/fa4.wav","sons/so4.wav","sons/la4.wav",
+						  "sons/si4.wav","sons/db1.wav","sons/rb1.wav","sons/fb1.wav","sons/sb1.wav","sons/lb1.wav","sons/db2.wav",
+						  "sons/rb2.wav","sons/fb2.wav","sons/sb2.wav","sons/lb2.wav","sons/db3.wav","sons/rb3.wav","sons/fb3.wav",
+						  "sons/sb3.wav","sons/lb3.wav","sons/db4.wav","sons/rb4.wav","sons/fb4.wav","sons/sb4.wav","sons/lb4.wav"};
 				  if(( key >= (Uint16)'a' ) && ( key <= (Uint16)'|' )){
 					musique = Mix_LoadMUS(tab[key-97]);
 					Mix_PlayMusic(musique, 1);
@@ -860,4 +866,3 @@ int main() //main function
  free(inputText);
  return EXIT_SUCCESS;
 }
-
