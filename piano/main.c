@@ -1,11 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <err.h>
 #include <SDL/SDL_ttf.h>
 #include <SDL/SDL_image.h>
 #include <SDL/SDL.h>
 #include <SDL/SDL_mixer.h>
 #include "pixel_operations.h"
+#include "time.h"
+
+#include <time.h>
+ 
+void my_delay(int i){
+ clock_t start,end;
+ start=clock();
+ while(((end=clock())-start)<=((i*CLOCKS_PER_SEC)/1000));
+}
 
 SDL_Surface* line()
 {
@@ -210,6 +222,45 @@ SDL_Surface* line()
   return screen;
 }
 
+int charPos(char* s,char c){
+  int l=strlen(s);
+  int res=-1,test=1,i=l-1;
+  while(i>=0 && test==1){
+	if(s[i] == c){
+	  test=0;
+	  res=i;
+	}
+	i--;
+  }
+  return res;
+}
+
+int charComp(char* a, char* b){
+  int la=strlen(a);
+  int lb=strlen(b);
+  if(la!=lb){
+	return -1;
+  }
+  int test=1,i=0;
+  while(i>la && test==1){
+	if(a[i]!=b[i]) test=-1;
+	i++;
+  }
+  return test;
+}		
+
+int StrToInt(char *s){
+  int res=0;
+  int len=strlen(s);
+  for(int i=0;i<len;i++){
+    res+=s[i]-48;
+    if(i!=len-1)
+      res*=10;
+  }
+  return res;
+}
+
+
 void path_write(SDL_Surface *screen){ //write the path
   SDL_Rect position;
   SDL_Surface *rectangle=NULL;
@@ -291,6 +342,35 @@ void click_button(SDL_Surface *screen,int x,int y) //animation button
   SDL_Flip(screen);
 }
 
+char* readToStr(char* fname){
+ int fd;
+ if((fd=open(fname,O_RDONLY,0666))==-1) {
+  return "000";
+ }
+ char buf[1];
+ int r,cpt=0;
+ char* res=malloc(sizeof(char));
+ while((r=read(fd,buf,1)) !=0){
+   res=realloc(res,(strlen(res)+1)*sizeof(char));
+   if(r == -1) break; 
+   for(int i=cpt;i<cpt+(int)strlen(buf);i++){
+     res[i]=buf[i-cpt];
+   }
+   cpt++;
+ }
+ if(r==-1) return "000";
+ int j=0,test=1;
+ while(j<(int)strlen(res) && test==1){
+   if(res[j] == 'E') //caractere de fin défini
+	 test=0;
+   else j++;
+ }
+ res=realloc(res,(strlen(res)-(strlen(res)-j))*sizeof(char)); 
+ res[j]='\0';
+ close(fd);
+ return res;
+}
+
 
 void error_img(SDL_Surface *screen,int test_int) //if the path is wrong
 {
@@ -317,6 +397,34 @@ void error_img(SDL_Surface *screen,int test_int) //if the path is wrong
  SDL_Flip(screen);
 }
 
+void reading(char* c){
+ int l=strlen(c);
+ Mix_Music *musique;
+ char son[12];
+ son[0]='s';
+ son[1]='o';
+ son[2]='n';
+ son[3]='s';
+ son[4]='/';
+ son[8]='.';
+ son[9]='w';
+ son[10]='a';
+ son[11]='v';
+ char temp[3];
+ for(int i=0;i<3;i++){
+   temp[i]=c[i];
+ }
+ for(int i=3;i<l;i+=3){
+  if(c[i]!=' '){
+    son[5]=c[i];
+    son[6]=c[i+1];
+    son[7]=c[i+2];
+    musique = Mix_LoadMUS(son);
+    Mix_PlayMusic(musique, 1);
+  }
+  my_delay(StrToInt(temp));
+ }  
+}
 
 int main() //main function
 {
@@ -356,34 +464,64 @@ int main() //main function
                  y = event.button.y;
                  if((x>=630 && x<=731)&&(y>=5 && y<=36)) //button done
                  {
-                  click_button(screen,630,5);                 
-                  error_img(screen,0);    
-                 }
+                  click_button(screen,630,5);
+				  char* format=malloc(4*sizeof(char));
+				  int len = strlen(inputText);
+				  int PointPos=charPos(inputText,'.');
+				  if(len > 4 && PointPos!=-1){
+					for(int i=PointPos;i<len;i++){ 
+					  format[i-PointPos]=inputText[i];
+					}
+				  }
+				  else error_img(screen,0);
+				  int r=charComp(format,".txt");
+				  if(r==-1) error_img(screen,0);
+				  if(r!=-1){ // TEXT PART 
+				    char* text=malloc(1024*sizeof(char));
+					printf("input text = %s\n" , inputText);
+					text=readToStr(inputText); 
+					printf("text = %s\n",text);
+					if(charComp(text,"000")!=-1){ 
+					  error_img(screen,0);
+					}
+					else{
+					  reading(text);
+					}
+				  } 
+				  /*else{ // IMAGE PART
+					if(load_image(inputText) != NULL)
+					{
+					  SDL_Surface  *img = load_image(inputText);
+					  ////// voir avec Samuel /////// (traitement d'image etc) cf projet s3
+
+				    }	  
+                  }*/
+				 }
 
 		 //// 1st gamme ////
                  
 		 else if((x>=29 && x<=55)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/dob1.wav");
+                  musique = Mix_LoadMUS("sons/db1.wav");
                   Mix_PlayMusic(musique, 1);
                  }
 		 
 		 else if((x>=84 && x<=100)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/reb1.wav");
+                   musique = Mix_LoadMUS("sons/rb1.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 		
 		 else if((x>=164 && x<=190)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fab1.wav");
+                   musique = Mix_LoadMUS("sons/fb1.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
                  else if((x>=214 && x<=240)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/solb1.wav");
+                   musique = Mix_LoadMUS("sons/sb1.wav");
                    Mix_PlayMusic(musique, 1);
                   }
                  
 		 else if((x>=265 && x<=290)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lab1.wav");
+                   musique = Mix_LoadMUS("sons/lb1.wav");
                    Mix_PlayMusic(musique, 1);
                  }
 
@@ -408,7 +546,7 @@ int main() //main function
                   }
 	
                  else if((x>=185 && x<=225)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/sol1.wav");
+                   musique = Mix_LoadMUS("sons/so1.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
@@ -424,27 +562,27 @@ int main() //main function
  
 		 //// 2nd gamme ////	
 		 else if((x>=344 && x<=370)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/dob2.wav");
+                  musique = Mix_LoadMUS("sons/db2.wav");
                   Mix_PlayMusic(musique, 1);
                  }
 		 
 		 else if((x>=399 && x<=425)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/reb2.wav");
+                   musique = Mix_LoadMUS("sons/rb2.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 		
 		 else if((x>=479 && x<=505)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fab2.wav");
+                   musique = Mix_LoadMUS("sons/fb2.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
                  else if((x>=530 && x<=555)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/solb2.wav");
+                   musique = Mix_LoadMUS("sons/sb2.wav");
                    Mix_PlayMusic(musique, 1);
                   }
                  
 		 else if((x>=580 && x<=605)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lab2.wav");
+                   musique = Mix_LoadMUS("sons/lb2.wav");
                    Mix_PlayMusic(musique, 1);
                  }
 
@@ -469,7 +607,7 @@ int main() //main function
                   }
 
                  else if((x>=500 && x<=540)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/sol2.wav");
+                   musique = Mix_LoadMUS("sons/so2.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
@@ -485,27 +623,27 @@ int main() //main function
 
 		 //// 3rd gamme ////	
 		 else if((x>=659 && x<=685)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/dob3.wav");
+                  musique = Mix_LoadMUS("sons/db3.wav");
                   Mix_PlayMusic(musique, 1);
                  }
 		 
 		 else if((x>=715 && x<=740)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/reb3.wav");
+                   musique = Mix_LoadMUS("sons/rb3.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 		
 		 else if((x>=794 && x<=820)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fab3.wav");
+                   musique = Mix_LoadMUS("sons/fb3.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
                  else if((x>=845 && x<=870)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/solb3.wav");
+                   musique = Mix_LoadMUS("sons/sb3.wav");
                    Mix_PlayMusic(musique, 1);
                   }
                  
 		 else if((x>=895 && x<=920)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lab3.wav");
+                   musique = Mix_LoadMUS("sons/lb3.wav");
                    Mix_PlayMusic(musique, 1);
                  }
 
@@ -530,7 +668,7 @@ int main() //main function
                   }
 
                  else if((x>=815 && x<=855)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/sol3.wav");
+                   musique = Mix_LoadMUS("sons/so3.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
@@ -546,27 +684,27 @@ int main() //main function
 
 		 //// 4th gamme ////
 		 else if((x>=974 && x<=1000)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/dob4.wav");
+                  musique = Mix_LoadMUS("sons/db4.wav");
                   Mix_PlayMusic(musique, 1);
                  }
 		 
 		 else if((x>=1029 && x<=1055)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/reb4.wav");
+                   musique = Mix_LoadMUS("sons/rb4.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 		
 		 else if((x>=1109 && x<=1135)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fab4.wav");
+                   musique = Mix_LoadMUS("sons/fb4.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
                  else if((x>=1159 && x<=1185)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/solb4.wav");
+                   musique = Mix_LoadMUS("sons/sob4.wav");
                    Mix_PlayMusic(musique, 1);
                   }
                  
 		 else if((x>=1209 && x<=1235)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lab4.wav");
+                   musique = Mix_LoadMUS("sons/lb4.wav");
                    Mix_PlayMusic(musique, 1);
                  }
 
@@ -591,7 +729,7 @@ int main() //main function
                   }
 
                  else if((x>=1130 && x<=1170)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/sol4.wav");
+                   musique = Mix_LoadMUS("sons/so4.wav");
                    Mix_PlayMusic(musique, 1);
                   }
 
@@ -614,7 +752,10 @@ int main() //main function
                  position.y=8;
                  /* typing the path */
                  int key=event.key.keysym.unicode;
-                 if(( key >= (Uint16)'A' ) && ( key <= (Uint16)'Z' ))
+				 ///// IF MOUSE.POS == WRITERECT (pour pouvoir jouer du son avec les touches) /////
+				 //char** tab=malloc(
+				 
+				 if(( key >= (Uint16)'A' ) && ( key <= (Uint16)'Z' ))
                  {
                   inputText = realloc(inputText,2*k+1*sizeof(char));
                   inputText[k]=(char)event.key.keysym.unicode;
@@ -628,7 +769,7 @@ int main() //main function
                  else if(( key >= (Uint16)'a' ) && ( key <= (Uint16)'z' ))
                  {
                   inputText = realloc(inputText,2*k+1*sizeof(char));
-		  inputText[k]=(char)event.key.keysym.unicode;
+		  		  inputText[k]=(char)event.key.keysym.unicode;
                   if(strlen(inputText) > k) inputText[k+1]='\0';
                   path_write(screen);
                   text = TTF_RenderText_Blended(police, inputText, white);
