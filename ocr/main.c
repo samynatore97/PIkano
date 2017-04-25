@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 //refais ta liste de ligne de portée fdp
 	struct list * num_lines = ligne_port(cpy);
 	size_t pas = calcul_pas(num_lines);
-	printf("Pas : %zu",pas);
+//	printf("Pas : %zu",pas);
 	completeInfoCoord(bar,l2,pas);
 //	print_list_coord(l2);
 

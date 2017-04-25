@@ -23,7 +23,7 @@ void sortie_fn_losig(struct perceptron *percep)
 	  percep->sortie = 1.0;
 	else
 	  percep->sortie = 0.0;
-	printf("Somme :%lf \n", somme);
+//	printf("Somme :%lf \n", somme);
 	//percep->sortie =  (1/(1.0+ exp(-coord->typeNote * somme)));
 }
 
