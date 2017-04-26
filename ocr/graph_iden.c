@@ -37,10 +37,10 @@ struct s_matrix* color_graph(SDL_Surface * partition)
 			}
 		}
 	}
-	struct s_matrix * res ;
-	res = delete_line(color, num_lines);
+//	struct s_matrix * res ;
+//	res = delete_line(color, num_lines);
 
-	return res ;
+	return color ;
 }
 //struct s_matrix * color_note_graph(struct s_matrix * ma)
 struct s_matrix * delete_line(struct s_matrix * mat, struct list * list)
