@@ -14,7 +14,7 @@ SRC =	matrix.c \
 		surface_operations.c \
 		coord.c		\
 		portee.c 	\
-		Neural_Network/perceptron.c \
+		Neural_Network/perceptron2.c \
 		output.c \
 		main.c
 OBJ = ${SRC:.c=.o}

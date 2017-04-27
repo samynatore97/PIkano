@@ -12,5 +12,5 @@
 # include "detection/cle_de_sol.h"
 # include "portee.h"
 # include "output.h"
-# include "Neural_Network/perceptron.h"
+# include "Neural_Network/perceptron2.h"
 #endif

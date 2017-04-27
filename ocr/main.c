@@ -75,50 +75,59 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		char * path = argv[1];
-		struct list * list_coord = genListFromFile(path);
-		struct perceptron ** tab_percep = init_reseau(3);
-		int i = 0;
-		double * entree = malloc(3 * sizeof(double));
-		while (i < 500000)
+    char * path = argv[1];
+    size_t nb_couches;
+		if (sscanf(argv[2], "%zu", &nb_couches) != 1)
+    {
+      printf("Erreur d'entrée\n");
+      exit(EXIT_FAILURE);
+    }
+    size_t *topologie = malloc(sizeof(size_t) * nb_couches);
+    for (size_t i = 0; i < nb_couches; i++)
+    {
+      if (sscanf(argv[3+i], "%zu", topologie+i) != 1)
+      {
+        printf("Erreur d'entrée\n");
+        exit(EXIT_FAILURE);
+      }
+    }
+  
+    struct neurone **reseau;
+
+    if (alloc_reseau(&reseau, topologie, nb_couches) == -1)
+    {
+      printf("Allocation impossible\n");
+      return EXIT_FAILURE;
+    }
+    init_poids(reseau, (size_t*)topologie, nb_couches);
+
+		struct list * list_exemples = genListFromFile(path);
+		size_t i = 0;
+    size_t nb_exemples = list_len(list_exemples);
+    double **tab_exemples = malloc(sizeof(double*) * nb_exemples); 
+    for (i=0; i < nb_exemples; i++)
+      tab_exemples[i] = malloc(sizeof(double) * 4);
+		struct list * ptr = list_exemples->next;
+    i=0;
+		while (ptr != NULL)
 		{
-			struct list * ptr = list_coord->next;
-			while (ptr != NULL)
-			{
-				struct coord * coord = (struct coord *)ptr->data;
-				if (coord->typeNote != -1)
-				{
-			  		entree[0] = coord-> nbPas;
-			 		entree[1] = coord->nbPixelNoir;
-			  		entree[2] = coord->nbCol;
-					maj_entrees_reseau(tab_percep, entree);
-			  		apprentissage(tab_percep, coord->typeNote);
-				}
-				ptr = ptr->next;
-			}
-			i++;
-		}
-		struct list * ptr_entrees = list_coord->next;
-		while(ptr_entrees != NULL)
-		{
-			struct coord * coord = (struct coord *) ptr_entrees->data;
+			struct coord * coord = (struct coord *)ptr->data;
 			if (coord->typeNote != -1)
 			{
-			  	entree[0] = coord-> nbPas;
-			 	entree[1] = coord->nbPixelNoir;
-			  	entree[2] = coord->nbCol;
-				maj_entrees_reseau(tab_percep, entree);
-
-				printf("Type de note : %d \n",coord->typeNote);
-				for (int i = 0 ; i < TAILLE; i++)
-				{
-					sortie_fn_losig(tab_percep[i]);
-					printf(" sortie %lf  \n",tab_percep[i]->sortie);
-				}
-				printf("\n");
+        tab_exemples[i][0] = coord-> nbPas;
+			 	tab_exemples[i][1] = coord->nbPixelNoir;
+			  tab_exemples[i][2] = coord->nbCol;
+				tab_exemples[i][3] = coord->typeNote;
+        i++;
 			}
-			ptr_entrees = ptr_entrees->next;
-		}	
-	}
+      else
+        nb_exemples--;
+
+			ptr = ptr->next;
+		}
+    
+    lance_apprentissage(reseau, tab_exemples,nb_exemples, (size_t*) topologie, nb_couches);
+    generalisation(reseau, tab_exemples, nb_exemples, (size_t*)topologie, nb_couches);
+  }
 	return 0; 
 }
