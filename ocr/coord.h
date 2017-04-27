@@ -21,6 +21,7 @@ struct coord * coord_init(struct coord *coord );
 void print_coord(struct coord * coord);
 void print_list_coord(struct list * list_coord);
 void draw_rect(struct s_matrix *mat, struct coord * coord);
+struct s_matrix * just_draw(struct s_matrix * mat, struct list * list);
 struct s_matrix* draw_all_rect(struct s_matrix * mat, struct list * list);
 struct s_matrix * get_mat_rect(struct s_matrix * mat, struct coord * coord);
 void display_all_rect(struct s_matrix * mat, struct list * list_coord);

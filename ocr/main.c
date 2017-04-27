@@ -40,6 +40,13 @@ int main(int argc, char *argv[])
 	SDL_Surface *graph = genImgFromMat(prey);
 	display_image(graph);
 
+	struct list * num_lines = ligne_port(cpy);
+   	size_t pas = calcul_pas(num_lines);	
+
+	struct s_matrix *sans_ligne = delete_line(prey,num_lines);
+	SDL_Surface *sans = genImgFromMat(sans_ligne);
+	display_image(sans);
+
 	struct list *l2 = fill_list_coord(prey);
 //	struct s_matrix * rect = draw_all_rect(prey,l2);
 //	SDL_Surface *rec = genImgFromMat(rect);
@@ -49,8 +56,6 @@ int main(int argc, char *argv[])
 	SDL_Surface * barr = genImgFromMat(prey);
 	display_image(barr);
 //refais ta liste de ligne de portée fdp
-	struct list * num_lines = ligne_port(cpy);
-	size_t pas = calcul_pas(num_lines);
 //	printf("Pas : %zu",pas);
 	completeInfoCoord(bar,l2,pas);
 //	print_list_coord(l2);
@@ -64,6 +69,9 @@ int main(int argc, char *argv[])
 	display_image(Sol);
 	
 */
+	struct s_matrix * jpp = just_draw(bar,l2);
+	SDL_Surface * de_toi = genImgFromMat(jpp);
+	display_image(de_toi);
 	display_all_rect(bar,l2);
 	create_file_note(l2,path);
 	print_list_coord(l2);

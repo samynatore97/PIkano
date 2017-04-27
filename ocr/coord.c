@@ -44,6 +44,17 @@ void  draw_rect(struct s_matrix *mat,struct coord * coord )
 	}
 	return ;
 }
+struct s_matrix *just_draw(struct s_matrix * mat, struct list * list)
+{
+	struct list * ptr = list->next;
+	while(ptr != NULL)
+	{
+		struct coord * coord = (struct coord *)(ptr->data);
+		draw_rect(mat,coord);
+		ptr = ptr->next;
+	}
+	return mat;
+}
 struct s_matrix * draw_all_rect(struct s_matrix *mat,struct list * list)
 {
 	struct list* ptr = list->next;

@@ -426,12 +426,12 @@ void reading(char* c){
  }  
 }
 
-int main() //main function
+int main(int argc, char* argv[]) //main function
 {
  /* init */
  SDL_Surface  *screen=NULL, *text=NULL;
  int test_int=1,x,y; 
-  
+ 
  size_t k=0;
  char *inputText=malloc(sizeof(char));
  SDL_Color white = {255,255,255,0};
@@ -452,7 +452,15 @@ int main() //main function
  SDL_EnableUNICODE(1);
  position.x=30;
  position.y=8;
- 
+
+ if(argc == 2){
+   char *mus=malloc(1024*sizeof(char));
+   mus = readToStr(argv[1]);
+   if(charComp(mus,"000")!=-1) error_img(screen,0);
+   else reading(mus);
+
+ }
+
  /* SDL_event */
  while ( test_int ) {
      while ( SDL_PollEvent(&event) ) {
