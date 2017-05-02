@@ -8,5 +8,5 @@
 # include <err.h>
 void create_file_note(struct list * list_coord,char * name);
 struct list * genListFromFile(char * path);
-
+void save_img(SDL_Surface * img, char *name);
 #endif

@@ -72,9 +72,14 @@ int main(int argc, char *argv[])
 	struct s_matrix * jpp = just_draw(bar,l2);
 	SDL_Surface * de_toi = genImgFromMat(jpp);
 	display_image(de_toi);
-	display_all_rect(bar,l2);
-	create_file_note(l2,path);
-	print_list_coord(l2);
+	save_img(de_toi,"test.bmp");
+
+// A REMETTRE FDP
+
+//	display_all_rect(bar,l2);
+//	create_file_note(l2,path);
+//	print_list_coord(l2);
+
 	//struct list * l3 = genListFromFile(path);
 //	print_list_coord(l3);
 //	struct s_matrix * rect = draw_all_rect(bar,l2);

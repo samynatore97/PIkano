@@ -16,7 +16,11 @@ void create_file_note(struct list * list_coord,char * name)
 	}
 	fclose(fichier);
 } 
-
+void save_img(SDL_Surface * img,char * name)
+{
+  FILE * fichier = fopen(name, "w+");
+  SDL_SaveBMP(img, name);
+}
 struct list * genListFromFile(char * path)
 {
 	 char * realpath ;
