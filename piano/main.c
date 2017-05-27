@@ -67,7 +67,14 @@ SDL_Surface* line()
   rectangle = SDL_CreateRGBSurface(SDL_HWSURFACE,610 , 25, 32, 0, 0, 0, 0);
   SDL_FillRect(rectangle, NULL, SDL_MapRGB(screen->format, 44, 62, 80));
   SDL_BlitSurface(rectangle, NULL, screen, &position);
-  
+ 
+  /* mic */
+
+  SDL_Surface *mic=IMG_Load("images/mic.png");
+  position.x = 900;
+  position.y = 5;
+  SDL_BlitSurface(mic, NULL, screen, &position);
+
   /* touches */
   SDL_Surface *touche=IMG_Load("images/do.png");
   position.x=5;
@@ -440,8 +447,6 @@ int main(int argc, char* argv[]) //main function
  if(Mix_OpenAudio(44100,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,1024)== -1)
    printf("%s", Mix_GetError());
    
- Mix_Music *musique;
- musique = Mix_LoadMUS("sons/do1.wav");
  TTF_Init();
  TTF_Font *police = NULL;
  police = TTF_OpenFont("Ubuntu-B.ttf", 14);
@@ -452,6 +457,9 @@ int main(int argc, char* argv[]) //main function
  SDL_EnableUNICODE(1);
  position.x=30;
  position.y=8;
+
+ int micTest = 1;
+ Mix_AllocateChannels(48);
 
  if(argc == 2){
    char *mus=malloc(1024*sizeof(char));
@@ -470,6 +478,28 @@ int main(int argc, char* argv[]) //main function
              case SDL_MOUSEBUTTONDOWN:
                  x = event.button.x;
                  y = event.button.y;
+				 
+				 if((x>=900 && x<=940)&&(y>=5 && y<=45)) // mic
+				 {
+				    if(micTest == 1){
+					  SDL_Surface *mic=IMG_Load("images/micOn.png");
+					  micTest =0;
+					  position.x = 900;
+					  position.y = 5;
+					  SDL_BlitSurface(mic, NULL, screen, &position);
+
+					}
+					else {
+					  SDL_Surface *mic=IMG_Load("images/mic.png");
+					  micTest=1;
+					  position.x = 900;
+					  position.y = 5;
+					  SDL_BlitSurface(mic, NULL, screen, &position);
+
+					}
+					SDL_Flip(screen);
+				 }
+
                  if((x>=630 && x<=731)&&(y>=5 && y<=36)) //button done
                  {
                   click_button(screen,630,5);
@@ -509,246 +539,252 @@ int main(int argc, char* argv[]) //main function
 		 //// 1st gamme ////
                  
 		 else if((x>=29 && x<=55)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/db1.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son1 = Mix_LoadWAV("sons/db1.wav");
+				  Mix_PlayChannel(1,son1,0);
                  }
 		 
 		 else if((x>=84 && x<=100)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/rb1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son2 = Mix_LoadWAV("sons/rb1.wav");
+				   Mix_PlayChannel(2,son2,0);
+
                   }
 		
 		 else if((x>=164 && x<=190)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fb1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son3 = Mix_LoadWAV("sons/fb1.wav");
+				   Mix_PlayChannel(3,son3,0);
+
                   }
 
                  else if((x>=214 && x<=240)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/sb1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son4 = Mix_LoadWAV("sons/sb1.wav");
+				   Mix_PlayChannel(4,son4,0);
                   }
                  
 		 else if((x>=265 && x<=290)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lb1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son5 = Mix_LoadWAV("sons/lb1.wav");
+				   Mix_PlayChannel(5,son5,0);
                  }
 
 		 else if((x>=5 && x<=45)&&(y>=250 && y<=550)) {
-                  musique = Mix_LoadMUS("sons/do1.wav");
-                  Mix_PlayMusic(musique, 1);
+                  //musique = Mix_LoadMUS("sons/do1.wav");
+                  //Mix_PlayMusic(musique, 1);
+				  Mix_Chunk *son6 = Mix_LoadWAV("sons/do1.wav");
+				  Mix_PlayChannel(6,son6,0);
                  }
 				 
 		 else if((x>=50 && x<=90)&&(y>=250 && y<=550)) {
-		  musique = Mix_LoadMUS("sons/re1.wav");
-		  Mix_PlayMusic(musique, 1);
+		  //musique = Mix_LoadMUS("sons/re1.wav");
+		  //Mix_PlayMusic(musique, 1);
+		   Mix_Chunk *son7 = Mix_LoadWAV("sons/re1.wav");
+		   Mix_PlayChannel(7,son7,0);
 		 }
 
                  else if((x>=95 && x<=135)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/mi1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son8 = Mix_LoadWAV("sons/mi1.wav");
+				   Mix_PlayChannel(8,son8,0);
                   }
 
                  else if((x>=140 && x<=180)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/fa1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son9 = Mix_LoadWAV("sons/fa1.wav");
+				   Mix_PlayChannel(9,son9,0);
                   }
 	
                  else if((x>=185 && x<=225)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/so1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son10 = Mix_LoadWAV("sons/so1.wav");
+				   Mix_PlayChannel(10,son10,0);
                   }
 
                  else if((x>=230 && x<=270)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/la1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son11 = Mix_LoadWAV("sons/la1.wav");
+				   Mix_PlayChannel(11,son11,0);
                   }
 
                  else if((x>=275 && x<=315)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/si1.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son12 = Mix_LoadWAV("sons/si1.wav");
+				   Mix_PlayChannel(12,son12,0);
                  }
  
 		 //// 2nd gamme ////	
 		 else if((x>=344 && x<=370)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/db2.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son13 = Mix_LoadWAV("sons/db2.wav");
+				   Mix_PlayChannel(13,son13,0);
                  }
 		 
 		 else if((x>=399 && x<=425)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/rb2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son14 = Mix_LoadWAV("sons/rb2.wav");
+				   Mix_PlayChannel(14,son14,0);
                   }
 		
 		 else if((x>=479 && x<=505)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fb2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son15 = Mix_LoadWAV("sons/fb2.wav");
+				   Mix_PlayChannel(15,son15,0);
                   }
 
                  else if((x>=530 && x<=555)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/sb2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son16 = Mix_LoadWAV("sons/sb2.wav");
+				   Mix_PlayChannel(16,son16,0);
                   }
                  
 		 else if((x>=580 && x<=605)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lb2.wav");
-                   Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son17 = Mix_LoadWAV("sons/lb2.wav");
+				   Mix_PlayChannel(17,son17,0);
                  }
 
 		 else if((x>=320 && x<=360)&&(y>=250 && y<=550)) {
-                  musique = Mix_LoadMUS("sons/do2.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son18 = Mix_LoadWAV("sons/do2.wav");
+				   Mix_PlayChannel(18,son18,0);
                  }
 				 
 		 else if((x>=365 && x<=405)&&(y>=250 && y<=550)) {
-		  musique = Mix_LoadMUS("sons/re2.wav");
-		  Mix_PlayMusic(musique, 1);
+		  Mix_Chunk *son19 = Mix_LoadWAV("sons/re2.wav");
+				   Mix_PlayChannel(19,son19,0);
 		 }
 
                  else if((x>=410 && x<=450)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/mi2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son20 = Mix_LoadWAV("sons/mi2.wav");
+				   Mix_PlayChannel(20,son20,0);
                   }
 
                  else if((x>=455 && x<=495)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/fa2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son21 = Mix_LoadWAV("sons/fa2.wav");
+				   Mix_PlayChannel(21,son21,0);
                   }
 
                  else if((x>=500 && x<=540)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/so2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son22 = Mix_LoadWAV("sons/so2.wav");
+				   Mix_PlayChannel(22,son22,0);
                   }
 
                  else if((x>=545 && x<=585)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/la2.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son23 = Mix_LoadWAV("sons/la2.wav");
+				   Mix_PlayChannel(23,son23,0);
                   }
 
                  else if((x>=590 && x<=630)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/si2.wav");
-                   Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son24 = Mix_LoadWAV("sons/si2.wav");
+				   Mix_PlayChannel(24,son24,0);
                  }
 
 		 //// 3rd gamme ////	
 		 else if((x>=659 && x<=685)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/db3.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son25 = Mix_LoadWAV("sons/db3.wav");
+				   Mix_PlayChannel(25,son25,0);
                  }
 		 
 		 else if((x>=715 && x<=740)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/rb3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son26 = Mix_LoadWAV("sons/rb3.wav");
+				   Mix_PlayChannel(26,son26,0);
                   }
 		
 		 else if((x>=794 && x<=820)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fb3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son27 = Mix_LoadWAV("sons/fb3.wav");
+				   Mix_PlayChannel(27,son27,0);
                   }
 
                  else if((x>=845 && x<=870)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/sb3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son28 = Mix_LoadWAV("sons/sb3.wav");
+				   Mix_PlayChannel(28,son28,0);
                   }
                  
 		 else if((x>=895 && x<=920)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lb3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son29 = Mix_LoadWAV("sons/lb3.wav");
+				   Mix_PlayChannel(29,son29,0);
                  }
 
 		 else if((x>=635 && x<=675)&&(y>=250 && y<=550)) {
-                  musique = Mix_LoadMUS("sons/do3.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son30 = Mix_LoadWAV("sons/do3.wav");
+				   Mix_PlayChannel(30,son30,0);
                  }
 				 
 		 else if((x>=680 && x<=720)&&(y>=250 && y<=550)) {
-		  musique = Mix_LoadMUS("sons/re3.wav");
-		  Mix_PlayMusic(musique, 1);
+		  Mix_Chunk *son31 = Mix_LoadWAV("sons/re3.wav");
+				   Mix_PlayChannel(31,son31,0);
 		 }
 
                  else if((x>=725 && x<=765)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/mi3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son32 = Mix_LoadWAV("sons/mi3.wav");
+				   Mix_PlayChannel(32,son32,0);
                   }
 
                  else if((x>=770 && x<=810)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/fa3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son33 = Mix_LoadWAV("sons/fa3.wav");
+				   Mix_PlayChannel(33,son33,0);
                   }
 
                  else if((x>=815 && x<=855)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/so3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son34 = Mix_LoadWAV("sons/so3.wav");
+				   Mix_PlayChannel(34,son34,0);
                   }
 
                  else if((x>=860 && x<=900)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/la3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son35 = Mix_LoadWAV("sons/la3.wav");
+				   Mix_PlayChannel(35,son35,0);
                   }
 
                  else if((x>=905 && x<=945)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/si3.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son36 = Mix_LoadWAV("sons/si3.wav");
+				   Mix_PlayChannel(36,son36,0);
                  }
 
 		 //// 4th gamme ////
 		 else if((x>=974 && x<=1000)&&(y>=250 && y<=430)) {
-                  musique = Mix_LoadMUS("sons/db4.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son37 = Mix_LoadWAV("sons/db4.wav");
+				   Mix_PlayChannel(37,son37,0);
                  }
 		 
 		 else if((x>=1029 && x<=1055)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/rb4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son38 = Mix_LoadWAV("sons/rb4.wav");
+				   Mix_PlayChannel(38,son38,0);;
                   }
 		
 		 else if((x>=1109 && x<=1135)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/fb4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son39 = Mix_LoadWAV("sons/fb4.wav");
+				   Mix_PlayChannel(39,son39,0);
                   }
 
                  else if((x>=1159 && x<=1185)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/sob4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son40 = Mix_LoadWAV("sons/sb4.wav");
+				   Mix_PlayChannel(40,son40,0);
                   }
                  
 		 else if((x>=1209 && x<=1235)&&(y>=250 && y<=430)) {
-                   musique = Mix_LoadMUS("sons/lb4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son41 = Mix_LoadWAV("sons/lb4.wav");
+				   Mix_PlayChannel(41,son41,0);
                  }
 
 		 else if((x>=950 && x<=990)&&(y>=250 && y<=550)) {
-                  musique = Mix_LoadMUS("sons/do4.wav");
-                  Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son42 = Mix_LoadWAV("sons/do4.wav");
+				   Mix_PlayChannel(42,son42,0);
                  }
 				 
 		 else if((x>=995 && x<=1035)&&(y>=250 && y<=550)) {
-		  musique = Mix_LoadMUS("sons/re4.wav");
-		  Mix_PlayMusic(musique, 1);
+		  Mix_Chunk *son43 = Mix_LoadWAV("sons/re4.wav");
+				   Mix_PlayChannel(43,son43,0);
 		 }
 
                  else if((x>=1040 && x<=1080)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/mi4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son44 = Mix_LoadWAV("sons/mi4.wav");
+				   Mix_PlayChannel(44,son44,0);
                   }
 
                  else if((x>=1085 && x<=1125)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/fa4.wav");
-                   Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son45 = Mix_LoadWAV("sons/fa4.wav");
+				   Mix_PlayChannel(45,son45,0);
                   }
 
                  else if((x>=1130 && x<=1170)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/so4.wav");
-                   Mix_PlayMusic(musique, 1);
+                  Mix_Chunk *son46 = Mix_LoadWAV("sons/so4.wav");
+				   Mix_PlayChannel(46,son46,0);
                   }
 
                  else if((x>=1175 && x<=1215)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/la4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son47 = Mix_LoadWAV("sons/la4.wav");
+				   Mix_PlayChannel(47,son47,0);
                   }
 
                  else if((x>=1220 && x<=1260)&&(y>=250 && y<=550)) {
-                   musique = Mix_LoadMUS("sons/si4.wav");
-                   Mix_PlayMusic(musique, 1);
+                   Mix_Chunk *son = Mix_LoadWAV("sons/si4.wav");
+				   Mix_PlayChannel(0,son,0);
                  }
 
 
@@ -848,13 +884,14 @@ int main(int argc, char* argv[]) //main function
 						  "sons/rb2.wav","sons/fb2.wav","sons/sb2.wav","sons/lb2.wav","sons/db3.wav","sons/rb3.wav","sons/fb3.wav",
 						  "sons/sb3.wav","sons/lb3.wav","sons/db4.wav","sons/rb4.wav","sons/fb4.wav","sons/sb4.wav","sons/lb4.wav"};
 				  if(( key >= (Uint16)'a' ) && ( key <= (Uint16)'|' )){
-					musique = Mix_LoadMUS(tab[key-97]);
-					Mix_PlayMusic(musique, 1);
+					Mix_Chunk *son = Mix_LoadWAV(tab[key-97]);
+					Mix_PlayChannel(key-97,son,0);
 				  }
 				  if(( key >= (Uint16)'A' ) && ( key <= (Uint16)'U' )){
-					musique = Mix_LoadMUS(tab[key-37]);
-					Mix_PlayMusic(musique, 1);
+					Mix_Chunk *son = Mix_LoadWAV(tab[key-37]);
+					Mix_PlayChannel(key-37,son,0);
 			      }
+				  
 				}
                break;
              case SDL_QUIT:
