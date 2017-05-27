@@ -430,8 +430,10 @@ void reading(char* c){
     if(k == 48) k=0;
 	Mix_PlayChannel(k,musique, 0);
 	k++;
-  }
-  my_delay(StrToInt(temp));
+	if(c[i]!='c'&&c[i]!='b') my_delay(StrToInt(temp));
+	else if(c[i]=='c') my_delay(StrToInt(temp/2));
+	else my_delay(StrToInt(temp*2));
+  else my_delay(StrToInt(temp/2));
  }  
 }
 
