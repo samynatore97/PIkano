@@ -10,6 +10,9 @@ int main(int argc, char *argv[])
 		 err(1,"must provide an img");
 	else if(argc == 2)
 	{
+		FILE * fichier = fopen("../piano/partition.txt","a");
+		fprintf(fichier,"%s","250");
+		fclose(fichier);
    	char* path = argv[1];
 	  SDL_Surface *partition1 = load_image(path);
     SDL_Surface * window = SDL_SetVideoMode(partition1->w,partition1->h,
@@ -121,7 +124,7 @@ int main(int argc, char *argv[])
                       note->symb_note->box, note);
                     printf("Valeur de la note : %s%d\n", 
                         value_to_string(note->value), note->octave);
-										 generate_txt("partition.txt",note);                   
+										 generate_txt("../piano/partition.txt",note);                   
                     draw_rect(prey, note->symb_note->box);
                 		image = genImgFromMat(prey);
                 		display_image(window, image);    
