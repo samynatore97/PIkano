@@ -431,10 +431,11 @@ void reading(char* c){
 	Mix_PlayChannel(k,musique, 0);
 	k++;
 	if(c[i]!='c'&&c[i]!='b') my_delay(StrToInt(temp));
-	else if(c[i]=='c') my_delay(StrToInt(temp/2));
-	else my_delay(StrToInt(temp*2));
-  else my_delay(StrToInt(temp/2));
- }  
+	else if(c[i]=='c') my_delay(StrToInt(temp)/2);
+	else my_delay(StrToInt(temp)*2);
+  }
+  else my_delay(StrToInt(temp)/2);
+ } 
 }
 
 int main(int argc, char* argv[]) //main function
