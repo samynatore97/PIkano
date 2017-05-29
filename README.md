@@ -9,7 +9,7 @@ Utilisation :
   Enregistrer ses propres composition :
     Une fois le piano lancé, cliqué sur le microphone(situé en haut à droite).
     Jouez votre composition.
-    Vous pouvez maintenant la réécoutez en tapant record.txt dans la zone de texte du piano.
+    Vous pouvez maintenant la réécouter en tapant "record.txt" dans la zone de texte du piano.
   
   Jouer un morceau à partir d'une image de partition :
   Se rendre dans le dossier Pikano.
@@ -19,6 +19,5 @@ Utilisation :
   
   
   
-  Samuel Nabet et
-  Guillaume Odile
+  Samuel Nabet et Guillaume Odile
   Développeur du projet de 2e année Pikano à l'EPITA
