@@ -426,7 +426,10 @@ void reading(char* c){
     son[5]=c[i];
     son[6]=c[i+1];
     son[7]=c[i+2];
-    Mix_Chunk *musique = Mix_LoadWAV(son);
+	if(son[5]=='c'){
+	  son[5] = 'b';
+	}
+	Mix_Chunk *musique = Mix_LoadWAV(son);
     if(k == 48) k=0;
 	Mix_PlayChannel(k,musique, 0);
 	k++;
