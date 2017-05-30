@@ -508,12 +508,14 @@ int main(int argc, char* argv[]) //main function
 					  position.x = 900;
 					  position.y = 5;
 					  SDL_BlitSurface(mic, NULL, screen, &position);
-					  record=realloc(record,(strlen(record)+1)*sizeof(char));
+					  record=realloc(record,(strlen(record)+2)*sizeof(char));
 					  record[rcpt]='E';
+					  record[rcpt+1]='\0';
 					  int fd;
 					  if ((fd = open("record.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666)) == -1) {
 						err(3, "error while opening %s", "record");
 					  }
+
 					  write(fd, record, strlen(record));
 
 			          close(fd);
